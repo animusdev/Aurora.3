@@ -318,7 +318,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 		// Actual whitelist checks are handled elsewhere, this is just for accessing the preview window.
 		var/choice = input("Which species would you like to look at?") as null|anything in playable_species
 		if(!choice) return
-		choice = html_decode(choice)
+		choice = rhtml_decode(choice)
 		pref.species_preview = choice
 		SetSpecies(preference_mob())
 		pref.alternate_languages.Cut() // Reset their alternate languages. Todo: attempt to just fix it instead?
@@ -330,7 +330,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 			return TOPIC_NOACTION
 
 		var/prev_species = pref.species
-		pref.species = html_decode(href_list["set_species"])
+		pref.species = rhtml_decode(href_list["set_species"])
 		if(prev_species != pref.species)
 			mob_species = all_species[pref.species]
 
