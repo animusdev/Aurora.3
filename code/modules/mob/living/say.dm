@@ -114,7 +114,7 @@ proc/get_radio_key_from_channel(var/channel)
 		if(prob(10))
 			src << "<span class='danger'>You feel a sharp pain from your jaw as you speak!</span>"
 			src.Weaken(3)
-	returns[1] = message
+	returns[1] = russian_to_cp1251(message)
 	returns[2] = verb
 	returns[3] = speech_problem_flag
 	return returns
