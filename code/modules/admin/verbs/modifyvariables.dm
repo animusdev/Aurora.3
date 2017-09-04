@@ -286,7 +286,7 @@ var/list/VVdynamic_lock = list(
 			modify_variables(variable)
 
 		if("DELETE FROM LIST")
-			world.log << "### ListVarEdit by [src]: [O.type] [objectvar]: REMOVED=[html_encode("[variable]")]"
+			world.log << "### ListVarEdit by [src]: [O.type] [objectvar]: REMOVED=[rhtml_encode("[variable]")]"
 			log_admin("[key_name(src)] modified [original_name]'s [objectvar]: REMOVED=[variable]",admin_key=key_name(src))
 			message_admins("[key_name_admin(src)] modified [original_name]'s [objectvar]: REMOVED=[variable]")
 			L -= variable
