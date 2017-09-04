@@ -307,7 +307,7 @@ var/list/admin_departments = list("[boss_name]", "Tau Ceti Government", "Supply"
 	//message badmins that a fax has arrived
 	switch(destination)
 		if (boss_name)
-			message_admins(sender, "[uppertext(boss_short)] FAX", rcvdcopy, "CentcommFaxReply", "#006100")
+			message_admins(sender, "[ruppertext(boss_short)] FAX", rcvdcopy, "CentcommFaxReply", "#006100")
 		if ("Tau Ceti Government")
 			message_admins(sender, "TAU CETI GOVERNMENT FAX", rcvdcopy, "CentcommFaxReply", "#1F66A0")
 			//message_admins(sender, "TAU CETi GOVERNMENT FAX", rcvdcopy, "TauCetiGovFaxReply", "#1F66A0")
