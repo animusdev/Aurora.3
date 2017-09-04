@@ -641,7 +641,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 		"<td width = 200 align='center'>"
 	)
 	if("preview" in icon_states(current_species.icobase))
-		var/curr_name = html_encode(current_species.name)
+		var/curr_name = rhtml_encode(current_species.name)
 		var/icon/preview = icon(current_species.icobase, "preview")
 		preview.Scale(64, 64)	// Scale it here to stop it blurring.
 		usr << browse_rsc(preview, "species_preview_[curr_name].png")
@@ -689,7 +689,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 		else if(restricted == 2)
 			dat += "<font color='red'><b>You cannot play as this species.</br><small>This species is not available for play as a station race.</small></b></font></br>"
 	if(!restricted || check_rights(R_ADMIN, 0))
-		dat += "\[<a href='?src=\ref[src];set_species=[html_encode(pref.species_preview)]'>select</a>\]"
+		dat += "\[<a href='?src=\ref[src];set_species=[rhtml_encode(pref.species_preview)]'>select</a>\]"
 	dat += "</center></body>"
 
 	user << browse(dat.Join(), "window=species;size=700x400")
