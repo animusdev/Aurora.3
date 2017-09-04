@@ -259,6 +259,7 @@
 
 /obj/item/weapon/paper/proc/parsepencode(t, obj/item/weapon/pen/P, mob/user, iscrayon)
 
+	t = cp1251_to_utf8(t)
 	t = replacetext(t, "\[sign\]", "<font face=\"[get_signfont(P, user)]\">[get_signature(P, user)]</font>")
 
 	if(iscrayon) // If it is a crayon, and he still tries to use these, make them empty!
