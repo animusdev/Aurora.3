@@ -223,11 +223,13 @@
 	if (!input)
 		usr << "<span class='warning'>Cancelled.</span>"
 		return
+	input = sanitize(input)
 
 	var/customname = input(usr, "Pick a title for the report", "Title") as text|null
 	if (!customname)
 		usr << "<span class='warning'>Cancelled.</span>"
 		return
+	customname = sanitize(customname)
 	var/announce = alert(user, "Do you wish to announce the fax being sent?", "Announce Fax", "Yes", "No")
 	if(announce == "Yes")
 		announce = 1
