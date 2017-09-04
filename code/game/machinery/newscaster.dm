@@ -597,11 +597,11 @@ var/list/obj/machinery/newscaster/allCasters = list() //Global list that will co
 			src.updateUsrDialog()
 
 		else if(href_list["set_wanted_name"])
-			src.channel_name = sanitizeSafe(input(usr, "Provide the name of the Wanted person", "Network Security Handler", ""), MAX_LNAME_LEN)
+			src.channel_name = russian_to_utf8(sanitizeSafe(input(usr, "Provide the name of the Wanted person", "Network Security Handler", ""), MAX_LNAME_LEN))
 			src.updateUsrDialog()
 
 		else if(href_list["set_wanted_desc"])
-			src.msg = sanitize(input(usr, "Provide the a description of the Wanted person and any other details you deem important", "Network Security Handler", ""))
+			src.msg = russian_to_utf8(sanitize(input(usr, "Provide the a description of the Wanted person and any other details you deem important", "Network Security Handler", "")))
 			src.updateUsrDialog()
 
 		else if(href_list["submit_wanted"])
