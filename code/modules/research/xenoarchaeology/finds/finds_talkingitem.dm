@@ -50,12 +50,12 @@
 		var/next = Xa + 1
 		if(heard_words.len > 20 + rand(10,20))
 			heard_words.Remove(heard_words[1])
-		if(!heard_words["[lowertext(seperate[Xa])]"])
-			heard_words["[lowertext(seperate[Xa])]"] = list()
-		var/list/w = heard_words["[lowertext(seperate[Xa])]"]
+		if(!heard_words["[rlowertext(seperate[Xa])]"])
+			heard_words["[rlowertext(seperate[Xa])]"] = list()
+		var/list/w = heard_words["[rlowertext(seperate[Xa])]"]
 		if(w)
-			w.Add("[lowertext(seperate[next])]")
-		//world << "Adding [lowertext(seperate[next])] to [lowertext(seperate[Xa])]"
+			w.Add("[rlowertext(seperate[next])]")
+		//world << "Adding [rlowertext(seperate[next])] to [rlowertext(seperate[Xa])]"
 
 	if(prob(30))
 		var/list/options = list("[holder_atom] seems to be listening intently to [source]...",\
@@ -98,7 +98,7 @@
 	if(msg=="What" | msg == "Who" | msg == "How" | msg == "Why" | msg == "Are")
 		q=1
 
-	text=lowertext(text)
+	text=rlowertext(text)
 	for(var/ya,ya <= limit,ya++)
 
 		if(heard_words.Find("[text]"))
