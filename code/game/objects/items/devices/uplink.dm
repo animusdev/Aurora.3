@@ -290,10 +290,10 @@ A list of items and costs is stored under the datum of every game mode, alongsid
 					else
 						contract["status"] = "0"
 
-				contract["title"] = html_encode(select_query.item[4])
+				contract["title"] = rhtml_encode(select_query.item[4])
 				contract["description"] = select_query.item[5]
 
-				contract["description"] = html_encode(contract["description"])
+				contract["description"] = rhtml_encode(contract["description"])
 				contract["description"] = replacetext(contract["description"], "\n", "<br>")
 				contract["description"] = replacetext(contract["description"], ascii2text(13), "")
 				contract["reward_other"] = select_query.item[6]
