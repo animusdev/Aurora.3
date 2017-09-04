@@ -219,7 +219,7 @@
 		return
 
 	//todo: sanitize
-	var/input = input(usr, "Please enter a message to reply to via secure connection. NOTE: BBCode does not work, but HTML tags do! Use <br> for line breaks.", "Outgoing message from Centcomm", "") as message|null
+	var/input = input_utf8(usr, "Please enter a message to reply to via secure connection. NOTE: BBCode does not work, but HTML tags do! Use <br> for line breaks.", "Outgoing message from Centcomm", "") as message|null
 	if (!input)
 		usr << "<span class='warning'>Cancelled.</span>"
 		return
