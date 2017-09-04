@@ -299,7 +299,7 @@ var/datum/controller/subsystem/ticker/SSticker
 
 	if(m)
 		world << "<font color='purple'><b>Tip of the round: \
-			</b>[html_encode(m)]</font>"
+			</b>[rhtml_encode(m)]</font>"
 
 /datum/controller/subsystem/ticker/proc/pregame()
 	set waitfor = FALSE
