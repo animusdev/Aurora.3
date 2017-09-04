@@ -601,7 +601,7 @@ var/list/obj/machinery/newscaster/allCasters = list() //Global list that will co
 			src.updateUsrDialog()
 
 		else if(href_list["set_wanted_desc"])
-			src.msg = russian_to_utf8(sanitize(input(usr, "Provide the a description of the Wanted person and any other details you deem important", "Network Security Handler", "")))
+			src.msg = sanitize(input(usr, "Provide the a description of the Wanted person and any other details you deem important", "Network Security Handler", ""))
 			src.updateUsrDialog()
 
 		else if(href_list["submit_wanted"])
