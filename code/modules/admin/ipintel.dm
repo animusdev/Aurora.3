@@ -36,7 +36,7 @@
 		if(establish_db_connection(dbcon))
 			var/DBQuery/query_get_ip_intel = dbcon.NewQuery({"
 				SELECT date, intel, TIMESTAMPDIFF(MINUTE,date,NOW())
-				FROM ss13_ipintel
+				FROM erro_ipintel
 				WHERE
 					ip = INET6_ATON('[ip]')
 					AND ((
@@ -63,7 +63,7 @@
 	if (updatecache && res.intel >= 0)
 		SSipintel.cache[ip] = res
 		if(establish_db_connection(dbcon))
-			var/DBQuery/query_add_ip_intel = dbcon.NewQuery("INSERT INTO ss13_ipintel (ip, intel) VALUES (INET6_ATON('[ip]'), [res.intel]) ON DUPLICATE KEY UPDATE intel = VALUES(intel), date = NOW()")
+			var/DBQuery/query_add_ip_intel = dbcon.NewQuery("INSERT INTO erro_ipintel (ip, intel) VALUES (INET6_ATON('[ip]'), [res.intel]) ON DUPLICATE KEY UPDATE intel = VALUES(intel), date = NOW()")
 			query_add_ip_intel.Execute()
 
 

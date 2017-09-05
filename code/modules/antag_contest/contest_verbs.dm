@@ -34,7 +34,7 @@
 		src << "<span class='warning'>Failed to establish SQL connection! Contact a member of staff!</span>"
 		return
 
-	var/DBQuery/character_query = dbcon.NewQuery("SELECT id, name FROM ss13_characters WHERE ckey = :ckey: AND deleted_at IS NULL")
+	var/DBQuery/character_query = dbcon.NewQuery("SELECT id, name FROM erro_characters WHERE ckey = :ckey: AND deleted_at IS NULL")
 	character_query.Execute(list("ckey" = src.ckey))
 	var/list/char_ids = list()
 
@@ -45,7 +45,7 @@
 		src << "<span class='warning'>Something went horribly wrong! Apparently you don't have any saved characters?</span>"
 		return
 
-	var/DBQuery/participation_query = dbcon.NewQuery("SELECT character_id, contest_faction FROM ss13_contest_participants WHERE character_id IN :char_ids:")
+	var/DBQuery/participation_query = dbcon.NewQuery("SELECT character_id, contest_faction FROM erro_contest_participants WHERE character_id IN :char_ids:")
 	participation_query.Execute(list("char_ids" = char_ids))
 
 	while (participation_query.NextRow())
@@ -102,7 +102,7 @@
 		src << "<span class='warning'>Failed to establish SQL connection! Contact a member of staff!</span>"
 		return
 
-	var/DBQuery/part_check = dbcon.NewQuery("SELECT contest_faction FROM ss13_contest_participants WHERE character_id = :char_id: AND player_ckey = :ckey:")
+	var/DBQuery/part_check = dbcon.NewQuery("SELECT contest_faction FROM erro_contest_participants WHERE character_id = :char_id: AND player_ckey = :ckey:")
 	part_check.Execute(list("char_id" = src.prefs.current_character, "ckey" = src.ckey))
 
 	if (part_check.NextRow())
@@ -246,10 +246,10 @@
 
 			var/list/sql_args = list("ckey" = src.ckey, "char_id" = href["char_id"], "new_side" = contest_factions[choice])
 
-			var/query_content = "UPDATE ss13_contest_participants SET contest_faction = :new_side: WHERE player_ckey = :ckey: AND character_id = :char_id:"
+			var/query_content = "UPDATE erro_contest_participants SET contest_faction = :new_side: WHERE player_ckey = :ckey: AND character_id = :char_id:"
 
 			if (text2num(href["previously_assigned"]) == 0)
-				query_content = "INSERT INTO ss13_contest_participants (player_ckey, character_id, contest_faction) VALUES (:ckey:, :char_id:, :new_side:)"
+				query_content = "INSERT INTO erro_contest_participants (player_ckey, character_id, contest_faction) VALUES (:ckey:, :char_id:, :new_side:)"
 
 			var/DBQuery/query = dbcon.NewQuery(query_content)
 			query.Execute(sql_args)

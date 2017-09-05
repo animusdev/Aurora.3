@@ -165,7 +165,7 @@
 		error("Error initiatlizing database connection while counting CCIA actions.")
 		return null
 
-	var/DBQuery/prep_query = dbcon.NewQuery("SELECT id FROM ss13_characters WHERE ckey = :ckey:")
+	var/DBQuery/prep_query = dbcon.NewQuery("SELECT id FROM erro_characters WHERE ckey = :ckey:")
 	prep_query.Execute(list("ckey" = user.ckey))
 	var/list/chars = list()
 
@@ -177,9 +177,9 @@
 
 	var/DBQuery/query = dbcon.NewQuery({"SELECT
 		COUNT(act_chr.action_id) AS action_count
-	FROM ss13_ccia_action_char act_chr
-	JOIN ss13_characters chr ON act_chr.char_id = chr.id
-	JOIN ss13_ccia_actions act ON act_chr.action_id = act.id
+	FROM erro_ccia_action_char act_chr
+	JOIN erro_characters chr ON act_chr.char_id = chr.id
+	JOIN erro_ccia_actions act ON act_chr.action_id = act.id
 	WHERE
 		act_chr.char_id IN :char_id: AND
 		(act.expires_at IS NULL OR act.expires_at >= CURRENT_DATE()) AND

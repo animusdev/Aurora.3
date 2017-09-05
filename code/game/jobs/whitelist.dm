@@ -50,7 +50,7 @@ var/list/whitelist = list()
 			error("Database connection failed while loading alien whitelists. Reverting to legacy system.")
 			config.sql_whitelists = 0
 		else
-			var/DBQuery/query = dbcon.NewQuery("SELECT status_name, flag FROM ss13_whitelist_statuses")
+			var/DBQuery/query = dbcon.NewQuery("SELECT status_name, flag FROM erro_whitelist_statuses")
 			query.Execute()
 
 			while (query.NextRow())

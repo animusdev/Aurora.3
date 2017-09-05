@@ -141,7 +141,7 @@ var/list/obj/machinery/requests_console/allConsoles = list()
 			data["sql_error"] = 1
 		else
 			if (!SQLquery)
-				SQLquery = "SELECT id, name, department FROM ss13_forms ORDER BY id"
+				SQLquery = "SELECT id, name, department FROM erro_forms ORDER BY id"
 
 			var/DBQuery/query = dbcon.NewQuery(SQLquery)
 			query.Execute()
@@ -259,10 +259,10 @@ var/list/obj/machinery/requests_console/allConsoles = list()
 	// Sort the forms.
 	if(href_list["sort"])
 		var/sortdep = sanitizeSQL(href_list["sort"])
-		SQLquery = "SELECT id, name, department FROM ss13_forms WHERE department LIKE '%[sortdep]%' ORDER BY id"
+		SQLquery = "SELECT id, name, department FROM erro_forms WHERE department LIKE '%[sortdep]%' ORDER BY id"
 
 	if (href_list["resetSQL"])
-		SQLquery = "SELECT id, name, department FROM ss13_forms ORDER BY id"
+		SQLquery = "SELECT id, name, department FROM erro_forms ORDER BY id"
 
 	// Print a form.
 	if(href_list["print"])
@@ -273,7 +273,7 @@ var/list/obj/machinery/requests_console/allConsoles = list()
 			alert("Connection to the database lost. Aborting.")
 		if(!printid)
 			alert("Invalid query. Try again.")
-		var/DBQuery/query = dbcon.NewQuery("SELECT id, name, data FROM ss13_forms WHERE id=[printid]")
+		var/DBQuery/query = dbcon.NewQuery("SELECT id, name, data FROM erro_forms WHERE id=[printid]")
 		query.Execute()
 
 		while(query.NextRow())
@@ -298,7 +298,7 @@ var/list/obj/machinery/requests_console/allConsoles = list()
 			alert("Connection to the database lost. Aborting.")
 		if(!whatisid)
 			alert("Invalid query. Try again.")
-		var/DBQuery/query = dbcon.NewQuery("SELECT id, name, department, info FROM ss13_forms WHERE id=[whatisid]")
+		var/DBQuery/query = dbcon.NewQuery("SELECT id, name, department, info FROM erro_forms WHERE id=[whatisid]")
 		query.Execute()
 		var/dat = "<center><b>NanoTrasen Corporate Form</b><br>"
 		while(query.NextRow())

@@ -94,7 +94,7 @@ datum/borrowbook // Datum used to keep track of who has borrowed what when and f
 			author = null
 		author = sanitizeSQL(author)
 	if(href_list["search"])
-		SQLquery = "SELECT author, title, category, id FROM ss13_library WHERE "
+		SQLquery = "SELECT author, title, category, id FROM erro_library WHERE "
 		if(category == "Any")
 			SQLquery += "author LIKE '%[author]%' AND title LIKE '%[title]%'"
 		else
@@ -197,7 +197,7 @@ datum/borrowbook // Datum used to keep track of who has borrowed what when and f
 				dat += {"<A href='?src=\ref[src];orderbyid=1'>(Order book by SS<sup>13</sup>BN)</A><BR><BR>
 				<table>
 				<tr><td><A href='?src=\ref[src];sort=author>AUTHOR</A></td><td><A href='?src=\ref[src];sort=title>TITLE</A></td><td><A href='?src=\ref[src];sort=category>CATEGORY</A></td><td></td></tr>"}
-				var/DBQuery/query = dbcon.NewQuery("SELECT id, author, title, category FROM ss13_library ORDER BY [sortby]")
+				var/DBQuery/query = dbcon.NewQuery("SELECT id, author, title, category FROM erro_library ORDER BY [sortby]")
 				query.Execute()
 
 				while(query.NextRow())
@@ -350,7 +350,7 @@ datum/borrowbook // Datum used to keep track of who has borrowed what when and f
 							var/sqlcontent = sanitizeSQL(scanner.cache.dat)
 							var/sqlcategory = sanitizeSQL(upload_category)
 							var/sqlckey = sanitizeSQL(ckey(usr.client.ckey))
-							var/DBQuery/query = dbcon.NewQuery("INSERT INTO ss13_library (author, title, content, category, uploadtime, uploader) VALUES ('[sqlauthor]', '[sqltitle]', '[sqlcontent]', '[sqlcategory]', NOW(), '[sqlckey]')")
+							var/DBQuery/query = dbcon.NewQuery("INSERT INTO erro_library (author, title, content, category, uploadtime, uploader) VALUES ('[sqlauthor]', '[sqltitle]', '[sqlcontent]', '[sqlcategory]', NOW(), '[sqlckey]')")
 							if(!query.Execute())
 								usr << query.ErrorMsg()
 							else
@@ -370,7 +370,7 @@ datum/borrowbook // Datum used to keep track of who has borrowed what when and f
 			bibledelay = 1
 			spawn(60)
 				bibledelay = 0
-			var/DBQuery/query = dbcon.NewQuery("SELECT * FROM ss13_library WHERE id=[sqlid]")
+			var/DBQuery/query = dbcon.NewQuery("SELECT * FROM erro_library WHERE id=[sqlid]")
 			query.Execute()
 
 			while(query.NextRow())

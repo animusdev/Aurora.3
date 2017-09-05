@@ -83,7 +83,7 @@
 		alert("An error occured while attempting to connect to the database!")
 		return 0
 
-	var/DBQuery/insert_query = dbcon.NewQuery("INSERT INTO ss13_web_sso (ckey, token, ip, created_at) VALUES (:ckey:, :token:, :ip:, NOW())")
+	var/DBQuery/insert_query = dbcon.NewQuery("INSERT INTO erro_web_sso (ckey, token, ip, created_at) VALUES (:ckey:, :token:, :ip:, NOW())")
 	insert_query.Execute(list("ckey" = user.ckey, "token" = token, "ip" = user.address))
 
 	if (insert_query.ErrorMsg())

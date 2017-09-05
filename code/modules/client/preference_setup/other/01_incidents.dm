@@ -15,9 +15,9 @@
 			act.details,
 			act.url,
 			act.expires_at
-		FROM ss13_ccia_action_char act_chr
-			JOIN ss13_characters chr ON act_chr.char_id = chr.id
-			JOIN ss13_ccia_actions act ON act_chr.action_id = act.id
+		FROM erro_ccia_action_char act_chr
+			JOIN erro_characters chr ON act_chr.char_id = chr.id
+			JOIN erro_ccia_actions act ON act_chr.action_id = act.id
 		WHERE
 			act_chr.char_id = :char_id: AND
 			(act.expires_at IS NULL OR act.expires_at >= CURRENT_DATE()) AND
@@ -40,7 +40,7 @@
 		//Load in the infractions
 		var/DBQuery/char_infraction_query = dbcon.NewQuery({"SELECT
 			id, char_id, UID, datetime, notes, charges, evidence, arbiters, brig_sentence, fine, felony
-		FROM ss13_character_incidents
+		FROM erro_character_incidents
 		WHERE
 			char_id = :char_id: AND deleted_at IS NULL
 		"})

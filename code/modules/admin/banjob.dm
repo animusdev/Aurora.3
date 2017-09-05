@@ -188,7 +188,7 @@ var/list/jobban_keylist = list() // Global jobban list.
 		return
 
 	// All jobbans in one query. Because we don't actually care.
-	var/DBQuery/query = dbcon.NewQuery("SELECT id, ckey, job, reason FROM ss13_ban WHERE isnull(unbanned) AND ((bantype = 'JOB_PERMABAN') OR (bantype = 'JOB_TEMPBAN' AND expiration_time > Now()))")
+	var/DBQuery/query = dbcon.NewQuery("SELECT id, ckey, job, reason FROM erro_ban WHERE isnull(unbanned) AND ((bantype = 'JOB_PERMABAN') OR (bantype = 'JOB_TEMPBAN' AND expiration_time > Now()))")
 	query.Execute()
 
 	while (query.NextRow())
