@@ -71,7 +71,7 @@
 	if(!istext(adm_ckey) || !istext(new_rank))
 		return
 
-	var/DBQuery/select_query = dbcon.NewQuery("SELECT id FROM ss13_admin WHERE ckey = '[adm_ckey]'")
+	var/DBQuery/select_query = dbcon.NewQuery("SELECT id FROM erro_admin WHERE ckey = '[adm_ckey]'")
 	select_query.Execute()
 
 	var/new_admin = 1
@@ -123,7 +123,7 @@
 	if(!istext(adm_ckey) || !isnum(new_permission))
 		return
 
-	var/DBQuery/select_query = dbcon.NewQuery("SELECT id, flags FROM ss13_admin WHERE ckey = '[adm_ckey]'")
+	var/DBQuery/select_query = dbcon.NewQuery("SELECT id, flags FROM erro_admin WHERE ckey = '[adm_ckey]'")
 	select_query.Execute()
 
 	var/admin_id

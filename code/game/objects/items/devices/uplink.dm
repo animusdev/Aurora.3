@@ -215,7 +215,7 @@ A list of items and costs is stored under the datum of every game mode, alongsid
 					nanoui_data["contracts_view"] = 1
 					query_details["status"] = "open"
 
-			var/DBQuery/index_query = dbcon.NewQuery("SELECT count(*) as Total_Contracts FROM ss13_syndie_contracts WHERE deleted_at IS NULL AND status = :status:")
+			var/DBQuery/index_query = dbcon.NewQuery("SELECT count(*) as Total_Contracts FROM erro_syndie_contracts WHERE deleted_at IS NULL AND status = :status:")
 			index_query.Execute(query_details)
 
 			var/pages = 0
@@ -244,7 +244,7 @@ A list of items and costs is stored under the datum of every game mode, alongsid
 
 				query_details["offset"] = (nanoui_data["contracts_current_page"] - 1) * 10
 
-				var/DBQuery/list_query = dbcon.NewQuery("SELECT contract_id, contractee_name, title FROM ss13_syndie_contracts WHERE deleted_at IS NULL AND status = :status: LIMIT 10 OFFSET :offset:")
+				var/DBQuery/list_query = dbcon.NewQuery("SELECT contract_id, contractee_name, title FROM erro_syndie_contracts WHERE deleted_at IS NULL AND status = :status: LIMIT 10 OFFSET :offset:")
 				list_query.Execute(query_details)
 
 				var/list/contracts = list()
@@ -274,7 +274,7 @@ A list of items and costs is stored under the datum of every game mode, alongsid
 			var/query_details[0]
 			query_details["contract_id"] = exploit_id
 
-			var/DBQuery/select_query = dbcon.NewQuery("SELECT contract_id, contractee_name, status, title, description, reward_other FROM ss13_syndie_contracts WHERE contract_id = :contract_id:")
+			var/DBQuery/select_query = dbcon.NewQuery("SELECT contract_id, contractee_name, status, title, description, reward_other FROM erro_syndie_contracts WHERE contract_id = :contract_id:")
 			select_query.Execute(query_details)
 
 			if (select_query.NextRow())

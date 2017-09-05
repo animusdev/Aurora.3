@@ -107,7 +107,7 @@
 	longfringe
 		name = "Long Fringe"
 		icon_state = "hair_longfringe"
-		
+
 	longeralt
 		name = "Longer Fringe"
 		icon_state = "hair_vlongfringe"
@@ -659,6 +659,98 @@
 		icon_state = "hair_manbun"
 		gender = MALE
 
+/*
+Bluebay
+*/
+	asymmbob
+		name = "Asymmbob"
+		icon_state = "hair_asymmbob"
+		gender = FEMALE
+
+	ladylike
+		name = "Ladylike"
+		icon_state = "hair_ladylike"
+		gender = FEMALE
+
+	ladylike2
+		name = "Ladylike2"
+		icon_state = "hair_ladylike2"
+		gender = FEMALE
+
+	sergeant
+		name = "Sergeant"
+		icon_state = "hair_sargeant"
+		gender = MALE
+
+	shoulderlen
+		name = "Shoulderlen"
+		icon_state = "hair_shoulderlen"
+
+	sideapart
+		name = "Sidepart"
+		icon_state = "hair_sidepart"
+
+	oneshoulder
+		name = "Oneshoulder"
+		icon_state = "hair_oneshoulder"
+		gender = FEMALE
+
+	ressshoulder
+		name = "Tressshoulder"
+		icon_state = "hair_tressshoulder"
+		gender = FEMALE
+
+	ponytailf
+		name = "Ponytailr"
+		icon_state = "hair_ponytailf"
+		gender = FEMALE
+
+	sideswipe
+		name = "Sideswipe"
+		icon_state = "hair_sideswipe"
+		gender = FEMALE
+
+	smessy
+		name = "Smessy"
+		icon_state = "hair_smessy"
+
+	unkept
+		name = "Unkept"
+		icon_state = "hair_unkept"
+		gender = FEMALE
+
+	spikyponytail
+		name = "Spiky Ponytail"
+		icon_state = "hair_spikyponytail"
+		gender = FEMALE
+
+	veryshortovereye
+		name = "Very Short Over Eye"
+		icon_state = "hair_veryshortovereye"
+		gender = FEMALE
+
+	veryshortovereyealternate_s
+		name = "Very Short Over Eye alt"
+		icon_state = "hair_veryshortovereyealternate"
+
+	wisp
+		name = "Wisp"
+		icon_state = "hair_wisp"
+		gender = FEMALE
+
+	ziegler
+		name = "Ziegler"
+		icon_state = "hair_ziegler"
+		gender = FEMALE
+
+	zone
+		name = "Zone"
+		icon_state = "hair_zone"
+		gender = FEMALE
+
+	kare
+		name = "Kare"
+		icon_state = "hair_kare"
 
 /*
 ///////////////////////////////////

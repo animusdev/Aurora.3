@@ -101,7 +101,7 @@
 			if (!dbcon.IsConnected())
 				src << "<span class='notice'>Unable to connect to the database.</span>"
 				return
-			var/DBQuery/query = dbcon.NewQuery("SELECT title, message FROM ss13_ccia_general_notice_list WHERE deleted_at IS NULL")
+			var/DBQuery/query = dbcon.NewQuery("SELECT title, message FROM erro_ccia_general_notice_list WHERE deleted_at IS NULL")
 			query.Execute()
 
 			var/list/template_names = list()

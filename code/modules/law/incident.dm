@@ -249,7 +249,7 @@
 		"game_id" = game_id
 	)
 	//Insert a new entry into the db. Upate if a entry with the same chard_id and UID already exists
-	var/DBQuery/infraction_insert_query = dbcon.NewQuery({"INSERT INTO ss13_character_incidents
+	var/DBQuery/infraction_insert_query = dbcon.NewQuery({"INSERT INTO erro_character_incidents
 		(char_id,  UID, datetime, notes, charges, evidence, arbiters, brig_sentence, fine, felony, created_by, game_id)
 	VALUES
 		(:char_id:, :uid:, :datetime:, :notes:, :charges:, :evidence:, :arbiters:, :brig_sentence:, :fine:, :felony:, :created_by:, :game_id:)
@@ -286,7 +286,7 @@
 		"deleted_by" = deleted_by
 	)
 	//Insert a new entry into the db. Upate if a entry with the same chard_id and UID already exists
-	var/DBQuery/infraction_delete_query = dbcon.NewQuery({"UPDATE ss13_character_incidents
+	var/DBQuery/infraction_delete_query = dbcon.NewQuery({"UPDATE erro_character_incidents
 	SET
 		deleted_by=:deleted_by:,
 		deleted_at=NOW()

@@ -18,7 +18,7 @@
 		return
 
 	if (!player_address || !player_computerid)
-		var/DBQuery/init_query = dbcon.NewQuery("SELECT ip, computerid FROM ss13_player WHERE ckey = :ckey:")
+		var/DBQuery/init_query = dbcon.NewQuery("SELECT ip, computerid FROM erro_player WHERE ckey = :ckey:")
 		init_query.Execute(list("ckey" = player_ckey))
 		if (init_query.NextRow())
 			if (!query_details["address"])
@@ -26,7 +26,7 @@
 			if (!query_details["computer_id"])
 				query_details["computer_id"] = init_query.item[2]
 
-	var/DBQuery/insert_query = dbcon.NewQuery("INSERT INTO ss13_notes (id, adddate, ckey, ip, computerid, a_ckey, content) VALUES (null, Now(), :ckey:, :address:, :computer_id:, :a_ckey:, :note:)")
+	var/DBQuery/insert_query = dbcon.NewQuery("INSERT INTO erro_notes (id, adddate, ckey, ip, computerid, a_ckey, content) VALUES (null, Now(), :ckey:, :address:, :computer_id:, :a_ckey:, :note:)")
 	insert_query.Execute(query_details)
 
 	message_admins("<span class='notice'>[key_name_admin(user)] has edited [player_ckey]'s notes.</span>")
@@ -45,7 +45,7 @@
 	var/ckey
 	var/note
 
-	var/DBQuery/init_query = dbcon.NewQuery("SELECT ckey, content FROM ss13_notes WHERE id = :note_id:")
+	var/DBQuery/init_query = dbcon.NewQuery("SELECT ckey, content FROM erro_notes WHERE id = :note_id:")
 	init_query.Execute(list("note_id" = note_id))
 	while (init_query.NextRow())
 		ckey = init_query.item[1]
@@ -65,7 +65,7 @@
 	switch (note_edit)
 		if ("delete")
 			if(alert("Delete this note?", "Delete?", "Yes", "No") == "Yes")
-				var/DBQuery/deletequery = dbcon.NewQuery("UPDATE ss13_notes SET visible = 0 WHERE id = :note_id:")
+				var/DBQuery/deletequery = dbcon.NewQuery("UPDATE erro_notes SET visible = 0 WHERE id = :note_id:")
 				deletequery.Execute(list("note_id" = note_id))
 
 				message_admins("<span class='notice'>[key_name_admin(usr)] deleted one of [ckey]'s notes.</span>")
@@ -78,7 +78,7 @@
 			if (!new_content)
 				usr << "Cancelled"
 				return
-			var/DBQuery/editquery = dbcon.NewQuery("UPDATE ss13_notes SET content = :new_content:, lasteditor = :a_ckey:, lasteditdate = Now(), edited = 1 WHERE id = :note_id:")
+			var/DBQuery/editquery = dbcon.NewQuery("UPDATE erro_notes SET content = :new_content:, lasteditor = :a_ckey:, lasteditdate = Now(), edited = 1 WHERE id = :note_id:")
 			editquery.Execute(list("new_content" = new_content, "a_ckey" = usr.client.ckey, "note_id" = note_id))
 
 /datum/admins/proc/show_notes_sql(var/player_ckey = null, var/admin_ckey = null)
@@ -122,13 +122,13 @@
 
 		dat += "<tr><td align='center' colspan='4' bgcolor='white'><b><a href='?src=\ref[src];add_player_info=[player_ckey]'>Add Note</a></b></td></tr>"
 
-		var/DBQuery/init_query = dbcon.NewQuery("SELECT ip, computerid FROM ss13_player WHERE ckey = :player_ckey:")
+		var/DBQuery/init_query = dbcon.NewQuery("SELECT ip, computerid FROM erro_player WHERE ckey = :player_ckey:")
 		init_query.Execute(query_details)
 		if (init_query.NextRow())
 			query_details["player_address"] = init_query.item[1]
 			query_details["player_computerid"] = init_query.item[2]
 
-		var/query_content = "SELECT id, adddate, ckey, a_ckey, content, edited, lasteditor, lasteditdate FROM ss13_notes WHERE ckey = :player_ckey: AND visible = '1'"
+		var/query_content = "SELECT id, adddate, ckey, a_ckey, content, edited, lasteditor, lasteditdate FROM erro_notes WHERE ckey = :player_ckey: AND visible = '1'"
 
 		if (query_details["player_address"])
 			query_content += " OR ip = :player_address: AND visible = '1'"
@@ -159,7 +159,7 @@
 				dat += "<tr><td colspan='4' bgcolor='white'>&nbsp</td></tr>"
 
 	else if (admin_ckey && !player_ckey)
-		var/aquery_content = "SELECT id, adddate, ckey, content, edited, lasteditor, lasteditdate FROM ss13_notes WHERE a_ckey = :a_ckey: AND visible = '1' ORDER BY adddate ASC"
+		var/aquery_content = "SELECT id, adddate, ckey, content, edited, lasteditor, lasteditdate FROM erro_notes WHERE a_ckey = :a_ckey: AND visible = '1' ORDER BY adddate ASC"
 		var/DBQuery/admin_query = dbcon.NewQuery(aquery_content)
 		admin_query.Execute(list("a_ckey" = admin_ckey))
 
@@ -190,7 +190,7 @@
 	if (!dbcon.IsConnected())
 		return "Unable to establish database connection! Aborting!"
 
-	var/DBQuery/info_query = dbcon.NewQuery("SELECT ip, computerid FROM ss13_player WHERE ckey = :ckey:")
+	var/DBQuery/info_query = dbcon.NewQuery("SELECT ip, computerid FROM erro_player WHERE ckey = :ckey:")
 	info_query.Execute(list("ckey" = ckey))
 
 	var/address = null
@@ -199,7 +199,7 @@
 		address = info_query.item[1]
 		computer_id = info_query.item[2]
 
-	var/query_content = "SELECT a_ckey, adddate, content FROM ss13_notes WHERE visible = '1' AND ckey = :ckey:"
+	var/query_content = "SELECT a_ckey, adddate, content FROM erro_notes WHERE visible = '1' AND ckey = :ckey:"
 	var/query_details = list("ckey" = ckey, "address" = address, "computerid" = computer_id)
 	if (address)
 		query_content += " OR ip = :address:"
@@ -237,7 +237,7 @@
 	for(var/t in note_keys)
 		var/IP = null
 		var/CID = null
-		var/DBQuery/query = dbcon.NewQuery("SELECT ip, computerid FROM ss13_player WHERE ckey = '[t]'")
+		var/DBQuery/query = dbcon.NewQuery("SELECT ip, computerid FROM erro_player WHERE ckey = '[t]'")
 		query.Execute()
 		if(query.NextRow())
 			IP = query.item[1]
@@ -290,9 +290,9 @@
 //			msg_scopes("Full DTG: [DTG]")
 			var/insertionstuff
 			if(IP && CID)
-				insertionstuff = "INSERT INTO ss13_notes (id, adddate, ckey, ip, computerid, a_ckey, content) VALUES (null, '[DTG]', '[t]', '[IP]', '[CID]', '[a_ckey]', '[I.content]')"
+				insertionstuff = "INSERT INTO erro_notes (id, adddate, ckey, ip, computerid, a_ckey, content) VALUES (null, '[DTG]', '[t]', '[IP]', '[CID]', '[a_ckey]', '[I.content]')"
 			else
-				insertionstuff = "INSERT INTO ss13_notes (id, adddate, ckey, ip, computerid, a_ckey, content) VALUES (null, '[DTG]', '[t]', null, null, '[a_ckey]', '[I.content]')"
+				insertionstuff = "INSERT INTO erro_notes (id, adddate, ckey, ip, computerid, a_ckey, content) VALUES (null, '[DTG]', '[t]', null, null, '[a_ckey]', '[I.content]')"
 			var/DBQuery/insertquery = dbcon.NewQuery(insertionstuff)
 			insertquery.Execute()
 			if(insertquery.ErrorMsg())

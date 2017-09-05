@@ -15,7 +15,7 @@
 
 	var/bad_data = BAD_CKEY|BAD_IP|BAD_CID
 
-	var/DBQuery/original_ban = dbcon.NewQuery("SELECT ckey, ip, computerid FROM ss13_ban WHERE id = :ban_id:")
+	var/DBQuery/original_ban = dbcon.NewQuery("SELECT ckey, ip, computerid FROM erro_ban WHERE id = :ban_id:")
 	original_ban.Execute(list("ban_id" = ban_id))
 
 	if (original_ban.NextRow())
@@ -30,7 +30,7 @@
 			bad_data &= ~BAD_CID
 
 		if (bad_data)
-			var/DBQuery/mirrored_bans = dbcon.NewQuery("SELECT ckey, ip, computerid FROM ss13_ban_mirrors WHERE ban_id = :ban_id:")
+			var/DBQuery/mirrored_bans = dbcon.NewQuery("SELECT ckey, ip, computerid FROM erro_ban_mirrors WHERE ban_id = :ban_id:")
 			mirrored_bans.Execute(list("ban_id" = ban_id))
 
 			while (mirrored_bans.NextRow())
@@ -66,7 +66,7 @@
 		log_misc("Ban database connection failure while attempting to check mirrors. Key passed for mirror checking: [ckey].")
 		return null
 
-	var/DBQuery/initial_query = dbcon.NewQuery("SELECT DISTINCT ban_id FROM ss13_ban_mirrors WHERE ckey = :ckey: OR ip = :address: OR computerid = :computerid:")
+	var/DBQuery/initial_query = dbcon.NewQuery("SELECT DISTINCT ban_id FROM erro_ban_mirrors WHERE ckey = :ckey: OR ip = :address: OR computerid = :computerid:")
 	initial_query.Execute(list("ckey" = ckey, "address" = address, "computerid" = computer_id))
 
 	var/list/ban_ids = list()
@@ -78,7 +78,7 @@
 	if (!ban_ids.len)
 		return null
 
-	var/DBQuery/search_query = dbcon.NewQuery("SELECT id FROM ss13_ban WHERE id IN :vars: AND (bantype = 'PERMABAN' OR (bantype = 'TEMPBAN' AND expiration_time > Now())) AND isnull(unbanned)")
+	var/DBQuery/search_query = dbcon.NewQuery("SELECT id FROM erro_ban WHERE id IN :vars: AND (bantype = 'PERMABAN' OR (bantype = 'TEMPBAN' AND expiration_time > Now())) AND isnull(unbanned)")
 	search_query.Execute(list("vars" = ban_ids))
 
 	var/list/active_bans = list()
@@ -102,7 +102,7 @@
 	for (var/i = 1; i <= extra_info.len && i <= 50; i++)
 		. |= extra_info[i][1]
 
-	var/DBQuery/new_mirror = dbcon.NewQuery("INSERT INTO ss13_ban_mirrors (id, ban_id, ckey, ip, computerid, source, extra_info, datetime) VALUES (NULL, :ban_id:, :ckey:, :address:, :computerid:, :source:, :info:, NOW())")
+	var/DBQuery/new_mirror = dbcon.NewQuery("INSERT INTO erro_ban_mirrors (id, ban_id, ckey, ip, computerid, source, extra_info, datetime) VALUES (NULL, :ban_id:, :ckey:, :address:, :computerid:, :source:, :info:, NOW())")
 	new_mirror.Execute(list("ban_id" = ban_id, "ckey" = ckey, "address" = address, "computerid" = computer_id, "source" = source, "info" = json_encode(.)))
 
 	log_misc("Mirrored ban #[ban_id] for player [ckey] from [address]-[computer_id].")
@@ -116,7 +116,7 @@
 	if (!dbcon.IsConnected())
 		return null
 
-	var/DBQuery/query = dbcon.NewQuery("SELECT id, ckey, ip, computerid, date(datetime) as datetime, source, extra_info FROM ss13_ban_mirrors WHERE ban_id = :ban_id:")
+	var/DBQuery/query = dbcon.NewQuery("SELECT id, ckey, ip, computerid, date(datetime) as datetime, source, extra_info FROM erro_ban_mirrors WHERE ban_id = :ban_id:")
 	query.Execute(list("ban_id" = ban_id))
 
 	var/list/mirrors = list()
@@ -200,7 +200,7 @@
 		to_chat(user, "<span class='warning'>Database connection failed!</span>")
 		return
 
-	var/DBQuery/query = dbcon.NewQuery("SELECT extra_info, ban_id FROM ss13_ban_mirrors WHERE id = :id:")
+	var/DBQuery/query = dbcon.NewQuery("SELECT extra_info, ban_id FROM erro_ban_mirrors WHERE id = :id:")
 	query.Execute(list("id" = mirror_id))
 
 	if (!query.NextRow())

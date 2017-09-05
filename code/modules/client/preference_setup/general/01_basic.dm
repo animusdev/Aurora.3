@@ -72,7 +72,7 @@
 
 		// Called /after/ loading and /before/ sanitization.
 		// So we have pref.current_character. It's just in text format.
-		var/DBQuery/query = dbcon.NewQuery("SELECT DATEDIFF(NOW(), created_at) AS DiffDate FROM ss13_characters WHERE id = :id:")
+		var/DBQuery/query = dbcon.NewQuery("SELECT DATEDIFF(NOW(), created_at) AS DiffDate FROM erro_characters WHERE id = :id:")
 		query.Execute(list("id" = text2num(pref.current_character)))
 
 		if (query.NextRow())

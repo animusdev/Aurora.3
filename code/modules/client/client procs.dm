@@ -106,7 +106,7 @@
 			return
 
 
-		var/DBQuery/check_query = dbcon.NewQuery("SELECT player_ckey, status FROM ss13_player_linking WHERE id = :id:")
+		var/DBQuery/check_query = dbcon.NewQuery("SELECT player_ckey, status FROM erro_player_linking WHERE id = :id:")
 		check_query.Execute(list("id" = request_id))
 
 		if (!check_query.NextRow())
@@ -122,13 +122,13 @@
 		var/feedback_message = ""
 		switch (href_list["linkingaction"])
 			if ("accept")
-				query_contents = "UPDATE ss13_player_linking SET status = :new_status:, updated_at = NOW() WHERE id = :id:"
+				query_contents = "UPDATE erro_player_linking SET status = :new_status:, updated_at = NOW() WHERE id = :id:"
 				query_details["new_status"] = "confirmed"
 				query_details["id"] = request_id
 
 				feedback_message = "<font color='green'><b>Account successfully linked!</b></font>"
 			if ("deny")
-				query_contents = "UPDATE ss13_player_linking SET status = :new_status:, deleted_at = NOW() WHERE id = :id:"
+				query_contents = "UPDATE erro_player_linking SET status = :new_status:, deleted_at = NOW() WHERE id = :id:"
 				query_details["new_status"] = "rejected"
 				query_details["id"] = request_id
 
@@ -394,7 +394,7 @@
 
 	var/sql_ckey = sql_sanitize_text(ckey(key))
 
-	var/DBQuery/query = dbcon.NewQuery("SELECT datediff(Now(),firstseen) as age FROM ss13_player WHERE ckey = '[sql_ckey]'")
+	var/DBQuery/query = dbcon.NewQuery("SELECT datediff(Now(),firstseen) as age FROM erro_player WHERE ckey = '[sql_ckey]'")
 	query.Execute()
 
 	if(query.NextRow())
@@ -411,7 +411,7 @@
 
 	var/sql_ckey = sql_sanitize_text(src.ckey)
 
-	var/DBQuery/query = dbcon.NewQuery("SELECT datediff(Now(),firstseen) as age, whitelist_status, account_join_date, DATEDIFF(NOW(), account_join_date) FROM ss13_player WHERE ckey = '[sql_ckey]'")
+	var/DBQuery/query = dbcon.NewQuery("SELECT datediff(Now(),firstseen) as age, whitelist_status, account_join_date, DATEDIFF(NOW(), account_join_date) FROM erro_player WHERE ckey = '[sql_ckey]'")
 
 	if(!query.Execute())
 		return
@@ -436,14 +436,14 @@
 				if (query_datediff.NextRow())
 					account_age = text2num(query_datediff.item[1])
 
-	var/DBQuery/query_ip = dbcon.NewQuery("SELECT ckey FROM ss13_player WHERE ip = '[address]'")
+	var/DBQuery/query_ip = dbcon.NewQuery("SELECT ckey FROM erro_player WHERE ip = '[address]'")
 	query_ip.Execute()
 	related_accounts_ip = ""
 	while(query_ip.NextRow())
 		related_accounts_ip += "[query_ip.item[1]], "
 		break
 
-	var/DBQuery/query_cid = dbcon.NewQuery("SELECT ckey FROM ss13_player WHERE computerid = '[computer_id]'")
+	var/DBQuery/query_cid = dbcon.NewQuery("SELECT ckey FROM erro_player WHERE computerid = '[computer_id]'")
 	query_cid.Execute()
 	related_accounts_cid = ""
 	while(query_cid.NextRow())
@@ -460,11 +460,11 @@
 
 	if(found)
 		//Player already identified previously, we need to just update the 'lastseen', 'ip' and 'computer_id' variables
-		var/DBQuery/query_update = dbcon.NewQuery("UPDATE ss13_player SET lastseen = Now(), ip = '[sql_ip]', computerid = '[sql_computerid]', lastadminrank = '[sql_admin_rank]', account_join_date = [account_join_date ? "'[account_join_date]'" : "NULL"] WHERE ckey = '[sql_ckey]'")
+		var/DBQuery/query_update = dbcon.NewQuery("UPDATE erro_player SET lastseen = Now(), ip = '[sql_ip]', computerid = '[sql_computerid]', lastadminrank = '[sql_admin_rank]', account_join_date = [account_join_date ? "'[account_join_date]'" : "NULL"] WHERE ckey = '[sql_ckey]'")
 		query_update.Execute()
 	else if (!config.access_deny_new_players)
 		//New player!! Need to insert all the stuff
-		var/DBQuery/query_insert = dbcon.NewQuery("INSERT INTO ss13_player (ckey, firstseen, lastseen, ip, computerid, lastadminrank, account_join_date) VALUES ('[sql_ckey]', Now(), Now(), '[sql_ip]', '[sql_computerid]', '[sql_admin_rank]', [account_join_date ? "'[account_join_date]'" : "NULL"])")
+		var/DBQuery/query_insert = dbcon.NewQuery("INSERT INTO erro_player (ckey, firstseen, lastseen, ip, computerid, lastadminrank, account_join_date) VALUES ('[sql_ckey]', Now(), Now(), '[sql_ip]', '[sql_computerid]', '[sql_admin_rank]', [account_join_date ? "'[account_join_date]'" : "NULL"])")
 		query_insert.Execute()
 	else
 		// Flag as -1 to know we have to kiiick them.
@@ -530,7 +530,7 @@
 	var/list/requests = list()
 	var/list/query_details = list("ckey" = ckey)
 
-	var/DBQuery/select_query = dbcon.NewQuery("SELECT id, forum_id, forum_username, datediff(Now(), created_at) as request_age FROM ss13_player_linking WHERE status = 'new' AND player_ckey = :ckey: AND deleted_at IS NULL")
+	var/DBQuery/select_query = dbcon.NewQuery("SELECT id, forum_id, forum_username, datediff(Now(), created_at) as request_age FROM erro_player_linking WHERE status = 'new' AND player_ckey = :ckey: AND deleted_at IS NULL")
 	select_query.Execute(query_details)
 
 	while (select_query.NextRow())
@@ -565,7 +565,7 @@
 	if (!dbcon.IsConnected())
 		return
 
-	var/DBQuery/select_query = dbcon.NewQuery("SELECT COUNT(*) AS request_count FROM ss13_player_linking WHERE status = 'new' AND player_ckey = :ckey: AND deleted_at IS NULL")
+	var/DBQuery/select_query = dbcon.NewQuery("SELECT COUNT(*) AS request_count FROM erro_player_linking WHERE status = 'new' AND player_ckey = :ckey: AND deleted_at IS NULL")
 	select_query.Execute(list("ckey" = ckey))
 
 	if (select_query.NextRow())

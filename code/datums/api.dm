@@ -40,7 +40,7 @@
 		return 0 // Authed (bypassed)
 
 	var/DBQuery/authquery = dbcon.NewQuery({"SELECT api_f.command
-	FROM ss13_api_token_command as api_t_f, ss13_api_tokens as api_t, ss13_api_commands as api_f
+	FROM erro_api_token_command as api_t_f, erro_api_tokens as api_t, erro_api_commands as api_f
 	WHERE api_t.id = api_t_f.token_id AND api_f.id = api_t_f.command_id
 	AND	api_t.deleted_at IS NULL
 	AND (
@@ -76,7 +76,7 @@ proc/api_update_command_database()
 	if (!establish_db_connection(dbcon))
 		return 0 //Error
 
-	var/DBQuery/commandinsertquery = dbcon.NewQuery({"INSERT INTO ss13_api_commands (command,description)
+	var/DBQuery/commandinsertquery = dbcon.NewQuery({"INSERT INTO erro_api_commands (command,description)
 	VALUES (:command_name:,:command_description:)
 	ON DUPLICATE KEY UPDATE description = :command_description:;"})
 
@@ -173,7 +173,7 @@ proc/api_update_command_database()
 		return 1
 
 	var/DBQuery/commandsquery = dbcon.NewQuery({"SELECT api_f.command
-	FROM ss13_api_token_command as api_t_f, ss13_api_tokens as api_t, ss13_api_commands as api_f
+	FROM erro_api_token_command as api_t_f, erro_api_tokens as api_t, erro_api_commands as api_f
 	WHERE api_t.id = api_t_f.token_id AND api_f.id = api_t_f.command_id
 	AND (
 		(token = :token: AND ip = :ip:)
@@ -224,7 +224,7 @@ proc/api_update_command_database()
 		return 1
 
 	var/DBQuery/permquery = dbcon.NewQuery({"SELECT api_f.command
-	FROM ss13_api_token_command as api_t_f, ss13_api_tokens as api_t, ss13_api_commands as api_f
+	FROM erro_api_token_command as api_t_f, erro_api_tokens as api_t, erro_api_commands as api_f
 	WHERE api_t.id = api_t_f.token_id AND api_f.id = api_t_f.command_id
 	AND	api_t.deleted_at IS NULL
 	AND (

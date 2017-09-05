@@ -510,13 +510,13 @@ datum/species/machine/handle_post_spawn(var/mob/living/carbon/human/H)
 
 		var/status = TRUE
 		var/list/query_details = list("ckey" = player.ckey, "character_name" = player.prefs.real_name)
-		var/DBQuery/query = dbcon.NewQuery("SELECT tag_status FROM ss13_ipc_tracking WHERE player_ckey = :ckey: AND character_name = :character_name:")
+		var/DBQuery/query = dbcon.NewQuery("SELECT tag_status FROM erro_ipc_tracking WHERE player_ckey = :ckey: AND character_name = :character_name:")
 		query.Execute(query_details)
 
 		if (query.NextRow())
 			status = text2num(query.item[1])
 		else
-			var/DBQuery/log_query = dbcon.NewQuery("INSERT INTO ss13_ipc_tracking (player_ckey, character_name, tag_status) VALUES (:ckey:, :character_name:, 1)")
+			var/DBQuery/log_query = dbcon.NewQuery("INSERT INTO erro_ipc_tracking (player_ckey, character_name, tag_status) VALUES (:ckey:, :character_name:, 1)")
 			log_query.Execute(query_details)
 
 		if (!status)
@@ -535,7 +535,7 @@ datum/species/machine/handle_post_spawn(var/mob/living/carbon/human/H)
 			status = TRUE
 
 		var/list/query_details = list("ckey" = player.ckey, "character_name" = target.real_name)
-		var/DBQuery/query = dbcon.NewQuery("SELECT tag_status FROM ss13_ipc_tracking WHERE player_ckey = :ckey: AND character_name = :character_name:")
+		var/DBQuery/query = dbcon.NewQuery("SELECT tag_status FROM erro_ipc_tracking WHERE player_ckey = :ckey: AND character_name = :character_name:")
 		query.Execute(query_details)
 
 		if (query.NextRow())
@@ -544,7 +544,7 @@ datum/species/machine/handle_post_spawn(var/mob/living/carbon/human/H)
 				return
 
 			query_details["status"] = status
-			var/DBQuery/update_query = dbcon.NewQuery("UPDATE ss13_ipc_tracking SET tag_status = :status: WHERE player_ckey = :ckey: AND character_name = :character_name:")
+			var/DBQuery/update_query = dbcon.NewQuery("UPDATE erro_ipc_tracking SET tag_status = :status: WHERE player_ckey = :ckey: AND character_name = :character_name:")
 			update_query.Execute(query_details)
 
 /datum/species/machine/get_light_color(hair_style)
