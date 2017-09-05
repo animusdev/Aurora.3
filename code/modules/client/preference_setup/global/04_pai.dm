@@ -28,13 +28,13 @@
 	candidate.savefile_save(preference_mob())
 
 /datum/category_item/player_setup_item/player_global/pai/gather_load_query()
-	return list("ss13_player_pai" = list("vars" = list("name" = "pai/name", "description" = "pai/description", "role" = "pai/role", "comments" = "pai/comments"), "args" = list("ckey")))
+	return list("erro_player_pai" = list("vars" = list("name" = "pai/name", "description" = "pai/description", "role" = "pai/role", "comments" = "pai/comments"), "args" = list("ckey")))
 
 /datum/category_item/player_setup_item/player_global/pai/gather_load_parameters()
 	return list("ckey" = pref.client.ckey)
 
 /datum/category_item/player_setup_item/player_global/pai/gather_save_query()
-	return list("ss13_player_pai" = list("name", "description", "role", "comments", "ckey" = 1))
+	return list("erro_player_pai" = list("name", "description", "role", "comments", "ckey" = 1))
 
 /datum/category_item/player_setup_item/player_global/pai/gather_save_parameters()
 	if (!candidate)

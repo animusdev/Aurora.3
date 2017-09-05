@@ -14,16 +14,16 @@ var/global/list/uplink_locations = list("PDA", "Headset", "None")
 
 /datum/category_item/player_setup_item/antagonism/basic/gather_load_query()
 	return list(
-		"ss13_characters_flavour" = list(
+		"erro_characters_flavour" = list(
 			"vars" = list(
 				"records_exploit" = "exploit_record"
-			), 
+			),
 			"args" = list("char_id")
 		),
-		"ss13_characters" = list(
+		"erro_characters" = list(
 			"vars" = list(
 				"uplink_location" = "uplinklocation"
-			), 
+			),
 			"args" = list("id")
 		)
 	)
@@ -36,11 +36,11 @@ var/global/list/uplink_locations = list("PDA", "Headset", "None")
 
 /datum/category_item/player_setup_item/antagonism/basic/gather_save_query()
 	return list(
-		"ss13_characters_flavour" = list(
-			"records_exploit", 
+		"erro_characters_flavour" = list(
+			"records_exploit",
 			"char_id" = 1
 		),
-		"ss13_characters" = list(
+		"erro_characters" = list(
 			"uplink_location",
 			"id" = 1,
 			"ckey" = 1

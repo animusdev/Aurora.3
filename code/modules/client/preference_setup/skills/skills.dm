@@ -14,11 +14,11 @@
 
 /datum/category_item/player_setup_item/skills/gather_load_query()
 	return list(
-		"ss13_characters" = list(
+		"erro_characters" = list(
 			"vars" = list(
 				"skills",
 				"skill_specialization"
-			), 
+			),
 			"args" = list("id")
 		)
 	)
@@ -28,7 +28,7 @@
 
 /datum/category_item/player_setup_item/skills/gather_save_query()
 	return list(
-		"ss13_characters" = list(
+		"erro_characters" = list(
 			"skills",
 			"skill_specialization",
 			"id" = 1,

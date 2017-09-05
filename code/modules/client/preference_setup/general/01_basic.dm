@@ -21,7 +21,7 @@
 
 /datum/category_item/player_setup_item/general/basic/gather_load_query()
 	return list(
-		"ss13_characters" = list(
+		"erro_characters" = list(
 			"vars" = list(
 				"name" = "real_name",
 				"gender",
@@ -39,7 +39,7 @@
 
 /datum/category_item/player_setup_item/general/basic/gather_save_query()
 	return list(
-		"ss13_characters" = list(
+		"erro_characters" = list(
 			"name",
 			"gender",
 			"age",
