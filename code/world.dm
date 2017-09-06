@@ -104,6 +104,8 @@ var/global/datum/global_init/init = new ()
 	return
 
 var/list/world_api_rate_limit = list()
+var/world_topic_spam_protect_ip = "0.0.0.0"
+var/world_topic_spam_protect_time = world.timeofday
 
 /world/Topic(T, addr, master, key)
 	var/list/response[] = list()
@@ -168,6 +170,83 @@ var/list/world_api_rate_limit = list()
 		response["data"] = command.data
 		return json_encode(response)
 
+//Old world.Topic() for Zlohub
+	diary << "TOPIC: \"[T]\", from:[addr], master:[master], key:[key][log_end]"
+
+	if (T == "ping")
+		var/x = 1
+		for (var/client/C)
+			x++
+		return x
+
+	else if(T == "players")
+		var/n = 0
+		for(var/mob/M in player_list)
+			if(M.client)
+				n++
+		return n
+
+	else if (copytext(T,1,7) == "status")
+		var/input[] = params2list(T)
+		var/list/s = list()
+		s["version"] = game_version
+		s["respawn"] = config.abandon_allowed
+		s["enter"] = config.enter_allowed
+		s["vote"] = config.allow_vote_mode
+		s["ai"] = config.allow_ai
+		s["host"] = host ? host : null
+
+		// This is dumb, but spacestation13.com's banners break if player count isn't the 8th field of the reply, so... this has to go here.
+		s["players"] = 0
+		s["worldtime"] = worldtime2hours()
+		s["roundduration"] = round_duration()
+
+		if(input["status"] == "2")
+			var/list/players = list()
+			var/list/admins = list()
+
+			for(var/client/C in clients)
+				if(C.holder)
+					if(!C.holder.fakekey)
+						continue
+					admins[C.key] = C.holder.rank
+				players += C.key
+
+			s["players"] = players.len
+			s["playerlist"] = list2params(players)
+			s["admins"] = admins.len
+			s["adminlist"] = list2params(admins)
+		else
+			var/n = 0
+			var/admins = 0
+
+			for(var/client/C in clients)
+				if(C.holder)
+					if(!C.holder.fakekey)
+						continue	//so stealthmins aren't revealed by the hub
+					admins++
+				s["player[n]"] = C.key
+				n++
+
+			s["players"] = n
+			s["admins"] = admins
+
+		return list2params(s)
+
+	else if(T == "revision")
+		var/list/L = list()
+		L["gameid"] = game_id
+		L["dm_version"] = DM_VERSION // DreamMaker version compiled in
+		L["dd_version"] = world.byond_version // DreamDaemon version running on
+
+		if(revdata.revision)
+			L["revision"] = revdata.revision
+			L["branch"] = revdata.branch
+			L["date"] = revdata.date
+		else
+			L["revision"] = "unknown"
+
+		return list2params(L)
 
 /world/Reboot(var/reason)
 	/*spawn(0)
