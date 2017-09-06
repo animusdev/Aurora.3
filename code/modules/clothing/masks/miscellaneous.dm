@@ -15,6 +15,7 @@
 	icon_state = "tape_cross"
 	item_state = null
 	w_class = 1
+	voicechange = 1
 
 /obj/item/clothing/mask/muzzle/New()
     ..()
