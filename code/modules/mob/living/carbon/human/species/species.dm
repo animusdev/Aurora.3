@@ -438,21 +438,23 @@
 	else if (H.stamina > 0)
 		remainder = cost - H.stamina
 		H.stamina = 0
-	else
-		remainder = cost
+	//else
+	//	remainder = cost
 
-	H.adjustOxyLoss(remainder*0.25)
-	H.adjustHalLoss(remainder*0.25)
-	H.updatehealth()
-	H.update_oxy_overlay()
+	//H.adjustOxyLoss(remainder*0.25)
+	//H.adjustHalLoss(remainder*0.25)
+	//H.updatehealth()
+	//H.update_oxy_overlay()
 
-	if (H.oxyloss >= (exhaust_threshold * 0.8))
-		H.m_intent = "walk"
-		H.hud_used.move_intent.update_move_icon(H)
-		H << span("danger", "You're too exhausted to run anymore!")
-		return 0
+	//if (H.oxyloss >= (exhaust_threshold * 0.8))
+	//	H.m_intent = "walk"
+	//	H.hud_used.move_intent.update_move_icon(H)
+	//	H << span("danger", "You're too exhausted to run anymore!")
+	//	return 0
+	H.m_intent = "walk"
 	H.hud_used.move_intent.update_move_icon(H)
-	return 1
+	H << span("danger", "You're too exhausted to run anymore!")
+	return 0
 
 /datum/species/proc/get_light_color(hair_style)
 	return
