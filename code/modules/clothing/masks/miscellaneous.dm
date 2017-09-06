@@ -1,4 +1,4 @@
-/obj/item/clothing/mask/muzzle
+/obj/item/clothing/mask/muzzlemuzzle
 	name = "muzzle"
 	desc = "To stop that awful noise."
 	icon_state = "muzzle"
@@ -55,6 +55,8 @@
 
 //scarves (fit in in mask slot)
 //None of these actually have on-mob sprites...
+/* Not working
+
 /obj/item/clothing/mask/bluescarf
 	name = "blue neck scarf"
 	desc = "A blue neck scarf."
@@ -84,7 +86,7 @@
 	item_flags = FLEXIBLEMATERIAL
 	w_class = 2
 	gas_transfer_coefficient = 0.90
-
+*/
 /obj/item/clothing/mask/ninjascarf
 	name = "ninja scarf"
 	desc = "A stealthy, dark scarf."
@@ -152,3 +154,53 @@
 
 		eye.owner.eyeobj = null
 		eye.owner = null
+
+//oh my God it is bluebay again//
+/obj/item/clothing/mask/bluefacescarf
+	name = "blue scarf"
+	desc =  "This scarf will cover your face! You can smell increased requirements."
+	icon_state = "blue_scarf"
+	item_state = "blue_scarf"
+	body_parts_covered = FACE
+	w_class = 2
+	gas_transfer_coefficient = 0.90
+
+/obj/item/clothing/mask/redwhitefacescarf
+	name = "red-white scarf"
+	desc =  "This scarf will cover your face! You can smell Xmas"
+	icon_state = "redwhite_scarf"
+	item_state = "redwhite_scarf"
+	body_parts_covered = FACE
+	w_class = 2
+	gas_transfer_coefficient = 0.90
+
+/obj/item/clothing/mask/greenfacescarf
+	name = "green scarf"
+	desc =  "This scarf will cover your face! You can smell something nostalgic."
+	icon_state = "green_scarf"
+	item_state = "green_scarf"
+	body_parts_covered = FACE
+	w_class = 2
+	gas_transfer_coefficient = 0.90
+
+
+/obj/item/clothing/mask/bluelongscarf
+	name = "blue long scarf"
+	desc =  "Long beautiful scarf."
+	icon_state = "stripedbluescarf"
+	item_state = "stripedbluescarf"
+	w_class = 2
+
+/obj/item/clothing/mask/redlongscarf
+	name = "red long scarf"
+	desc =  "Long beautiful scarf."
+	icon_state = "stripedredscarf"
+	item_state = "stripedredscarf"
+	w_class = 2
+
+/obj/item/clothing/mask/greenlongscarf
+	name = "green long scarf"
+	desc =  "Long beautiful scarf."
+	icon_state = "stripedgreenscarf"
+	item_state = "stripedgreenscarf"
+	w_class = 2
