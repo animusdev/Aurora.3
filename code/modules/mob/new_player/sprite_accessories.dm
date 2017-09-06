@@ -752,6 +752,13 @@ Bluebay
 		name = "Kare"
 		icon_state = "hair_kare"
 
+	bunalt
+		name = "Casual Bun"
+		icon_state = "hair_bunalt"
+
+	pixie
+		name = "Pixie"
+		icon_state = "hair_pixie"
 /*
 ///////////////////////////////////
 /  =---------------------------=  /
