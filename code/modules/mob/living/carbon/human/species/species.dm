@@ -430,7 +430,7 @@
 		log_debug("Error: Species with special sprint mechanics has not overridden cost function.")
 		return 0
 
-	var/remainder = 0
+	//var/remainder = 0
 	if (H.stamina > cost)
 		H.stamina -= cost
 		H.hud_used.move_intent.update_move_icon(H)
