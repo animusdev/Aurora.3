@@ -436,7 +436,7 @@
 		H.hud_used.move_intent.update_move_icon(H)
 		return 1
 	else if (H.stamina > 0)
-		remainder = cost - H.stamina
+		//remainder = cost - H.stamina
 		H.stamina = 0
 	//else
 	//	remainder = cost
