@@ -51,7 +51,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 
 /datum/category_item/player_setup_item/general/body/gather_load_query()
 	return list(
-		"ss13_characters" = list(
+		"erro_characters" = list(
 			"vars" = list(
 				"hair_colour",
 				"facial_colour",
@@ -75,7 +75,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 
 /datum/category_item/player_setup_item/general/body/gather_save_query()
 	return list(
-		"ss13_characters" = list(
+		"erro_characters" = list(
 			"hair_colour",
 			"facial_colour",
 			"skin_tone",

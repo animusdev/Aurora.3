@@ -24,7 +24,7 @@
 
 /datum/category_item/player_setup_item/player_global/settings/gather_load_query()
 	return list(
-		"ss13_player_preferences" = list(
+		"erro_player_preferences" = list(
 			"vars" = list(
 				"lastchangelog",
 				"current_character",
@@ -32,7 +32,7 @@
 				"asfx_togs",
 				"lastmotd" = "motd_hash",
 				"lastmemo" = "memo_hash"
-			), 
+			),
 			"args" = list("ckey")
 		)
 	)
@@ -42,7 +42,7 @@
 
 /datum/category_item/player_setup_item/player_global/settings/gather_save_query()
 	return list(
-		"ss13_player_preferences" = list(
+		"erro_player_preferences" = list(
 			"lastchangelog",
 			"current_character",
 			"toggles",

@@ -47,10 +47,10 @@ var/list/gear_datums = list()
 	return list("id" = pref.current_character)
 
 /datum/category_item/player_setup_item/loadout/gather_load_query()
-	return list("ss13_characters" = list("vars" = list("gear"), "args" = list("id")))
+	return list("erro_characters" = list("vars" = list("gear"), "args" = list("id")))
 
 /datum/category_item/player_setup_item/loadout/gather_save_query()
-	return list("ss13_characters" = list("gear", "id" = 1, "ckey" = 1))
+	return list("erro_characters" = list("gear", "id" = 1, "ckey" = 1))
 
 /datum/category_item/player_setup_item/loadout/gather_save_parameters()
 	return list("gear" = json_encode(pref.gear), "id" = pref.current_character, "ckey" = pref.client.ckey)

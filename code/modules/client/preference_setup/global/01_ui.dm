@@ -16,13 +16,13 @@
 
 /datum/category_item/player_setup_item/player_global/ui/gather_load_query()
 	return list(
-		"ss13_player_preferences" = list(
+		"erro_player_preferences" = list(
 			"vars" = list(
 				"UI_style",
 				"UI_style_color",
 				"UI_style_alpha",
 				"ooccolor"
-			), 
+			),
 			"args" = list("ckey")
 		)
 	)
@@ -32,7 +32,7 @@
 
 /datum/category_item/player_setup_item/player_global/ui/gather_save_query()
 	return list(
-		"ss13_player_preferences" = list(
+		"erro_player_preferences" = list(
 			"UI_style",
 			"UI_style_color",
 			"UI_style_alpha",

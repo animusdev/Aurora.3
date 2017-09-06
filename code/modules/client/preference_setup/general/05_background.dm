@@ -24,7 +24,7 @@
 
 /datum/category_item/player_setup_item/general/background/gather_load_query()
 	return list(
-		"ss13_characters_flavour" = list(
+		"erro_characters_flavour" = list(
 			"vars" = list(
 				"records_employment" = "gen_record",
 				"records_medical" = "med_record",
@@ -33,12 +33,12 @@
 			),
 			"args" = list("char_id")
 		),
-		"ss13_characters" = list(
+		"erro_characters" = list(
 			"vars" = list(
 				"nt_relation" = "nanotrasen_relation",
-				"home_system", 
-				"citizenship", 
-				"faction", 
+				"home_system",
+				"citizenship",
+				"faction",
 				"religion"
 			),
 			"args" = list("id")
@@ -53,15 +53,15 @@
 
 /datum/category_item/player_setup_item/general/background/gather_save_query()
 	return list(
-		"ss13_characters_flavour" = list(
+		"erro_characters_flavour" = list(
 			"records_employment",
 			"records_medical",
 			"records_security",
 			"char_id" = 1
 		),
-		"ss13_characters" = list(
-			"nt_relation", 
-			"home_system", 
+		"erro_characters" = list(
+			"nt_relation",
+			"home_system",
 			"citizenship",
 			"faction",
 			"religion","id" = 1,

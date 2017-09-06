@@ -35,7 +35,7 @@
 
 /datum/category_item/player_setup_item/occupation/gather_load_query()
 	return list(
-		"ss13_characters" = list(
+		"erro_characters" = list(
 			"vars" = list(
 				"jobs" = "unsanitized_jobs",
 				"alternate_option",
@@ -50,7 +50,7 @@
 
 /datum/category_item/player_setup_item/occupation/gather_save_query()
 	return list(
-		"ss13_characters" = list(
+		"erro_characters" = list(
 			"jobs",
 			"alternate_option",
 			"alternate_titles",

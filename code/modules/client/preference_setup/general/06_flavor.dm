@@ -59,8 +59,8 @@
 		var_list["robot_[module]"] = "flavour_texts_robot/[module]"
 
 	return list(
-		"ss13_characters_flavour" = list(
-			"vars" = var_list, 
+		"erro_characters_flavour" = list(
+			"vars" = var_list,
 			"args" = list("char_id")
 		)
 	)
@@ -88,7 +88,7 @@
 	for (var/module in robot_module_types)
 		var_list += "robot_[module]"
 
-	return list("ss13_characters_flavour" = var_list)
+	return list("erro_characters_flavour" = var_list)
 
 /datum/category_item/player_setup_item/general/flavor/gather_save_parameters()
 	var/list/var_list = list(

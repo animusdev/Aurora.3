@@ -13,13 +13,13 @@
 	S["be_special"]	<< pref.be_special_role
 
 /datum/category_item/player_setup_item/antagonism/candidacy/gather_load_query()
-	return list("ss13_characters" = list("vars" = list("be_special_role"), "args" = list("id")))
+	return list("erro_characters" = list("vars" = list("be_special_role"), "args" = list("id")))
 
 /datum/category_item/player_setup_item/antagonism/candidacy/gather_load_parameters()
 	return list("id" = pref.current_character)
 
 /datum/category_item/player_setup_item/antagonism/candidacy/gather_save_query()
-	return list("ss13_characters" = list("be_special_role", "id" = 1, "ckey" = 1))
+	return list("erro_characters" = list("be_special_role", "id" = 1, "ckey" = 1))
 
 /datum/category_item/player_setup_item/antagonism/candidacy/gather_save_parameters()
 	return list("be_special_role" = list2params(pref.be_special_role), "id" = pref.current_character, "ckey" = pref.client.ckey)

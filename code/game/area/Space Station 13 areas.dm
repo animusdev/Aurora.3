@@ -1425,8 +1425,60 @@ area/space/atmosalert()
 		temp_timer.releasetime = 1
 	..()
 
+/area/security/main
+	name = "\improper Security Office"
+	icon_state = "security"
+
+/area/security/meeting
+	name = "\improper Security Meeting Room"
+	icon_state = "security"
+
+/area/security/lobby
+	name = "\improper Security Lobby"
+	icon_state = "security"
+
+/area/security/brig/processing
+	name = "\improper Security - Processing"
+	icon_state = "brig"
+
+/area/security/brig/interrogation
+	name = "\improper Security - Interrogation"
+	icon_state = "brig"
+
+/area/security/brig/solitaryA
+	name = "\improper Security - Solitary 1"
+	icon_state = "sec_prison"
+
+/area/security/brig/solitaryB
+	name = "\improper Security - Solitary 2"
+	icon_state = "sec_prison"
+
+/area/security/brig/restroom
+	name = "\improper Security - Restrooms"
+	icon_state = "sec_prison"
+
 /area/security/prison
 	name = "\improper Security - Prison Wing"
+	icon_state = "sec_prison"
+
+/area/security/prison/restroom
+	name = "\improper Security - Prison Wing Restroom"
+	icon_state = "sec_prison"
+
+/area/security/prison/main
+	name = "\improper Security - Prison Wing Main Chamber"
+	icon_state = "sec_prison"
+
+/area/security/prison/dorm
+	name = "\improper Security - Prison Wing Dormitory"
+	icon_state = "sec_prison"
+
+/area/security/prison/hallway
+	name = "\improper Security - Prison Wing Hallway"
+	icon_state = "sec_prison"
+
+/area/security/prison/punishment
+	name = "\improper Security - Prison Wing Chastisement"
 	icon_state = "sec_prison"
 
 /area/security/prison/prison_break()
@@ -1436,6 +1488,8 @@ area/space/atmosalert()
 	for(var/obj/machinery/door_timer/temp_timer in src)
 		temp_timer.releasetime = 1
 	..()
+
+
 
 /area/security/warden
 	name = "\improper Security - Warden's Office"

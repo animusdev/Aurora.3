@@ -10,10 +10,10 @@
 
 /datum/category_item/player_setup_item/general/language/gather_load_query()
 	return list(
-		"ss13_characters" = list(
+		"erro_characters" = list(
 			"vars" = list(
 				"language" = "alternate_languages"
-			), 
+			),
 			"args" = list("id")
 		)
 	)
@@ -23,7 +23,7 @@
 
 /datum/category_item/player_setup_item/general/language/gather_save_query()
 	return list(
-		"ss13_characters" = list(
+		"erro_characters" = list(
 			"id" = 1,
 			"ckey" = 1,
 			"language"

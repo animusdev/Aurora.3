@@ -16,13 +16,13 @@
 
 /datum/category_item/player_setup_item/general/equipment/gather_load_query()
 	return list(
-		"ss13_characters" = list(
+		"erro_characters" = list(
 			"vars" = list(
 				"underwear",
 				"undershirt",
 				"socks",
 				"backbag"
-			), 
+			),
 			"args" = list("id")
 		)
 	)
@@ -32,7 +32,7 @@
 
 /datum/category_item/player_setup_item/general/equipment/gather_save_query()
 	return list(
-		"ss13_characters" = list(
+		"erro_characters" = list(
 			"underwear",
 			"undershirt",
 			"socks",
