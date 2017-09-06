@@ -9,6 +9,7 @@ var/list/admin_verbs_default = list(
 	/client/proc/cmd_mentor_check_new_players
 	)
 var/list/admin_verbs_admin = list(
+	/client/proc/checkAccount,
 	/client/proc/debug_variables,		/*allows us to -see- the variables of any instance in the game.*/
 	/client/proc/player_panel_new,		/*shows an interface for all players, with links to various panels*/
 	/client/proc/invisimin,				/*allows our mob to go invisible/visible*/
