@@ -81,7 +81,6 @@
 	else
 		msg += "<b>Total Players: [length(Lines)]</b>"
 		to_chat(src, msg)
-		src << msg
 
 /client/verb/staffwho()
 	set category = "Admin"
