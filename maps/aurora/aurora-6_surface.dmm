@@ -11436,6 +11436,10 @@
 /area/crew_quarters/locker)
 "uV" = (
 /obj/structure/closet/wardrobe/mixed,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = 24
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
 "uW" = (
@@ -14091,6 +14095,7 @@
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
 "zF" = (
+/obj/structure/closet/secure_closet/personal,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
@@ -14122,23 +14127,16 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/sign/directions/evac{
-	dir = 1;
-	icon_state = "direction_evac";
-	pixel_x = 0;
-	pixel_y = -24
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
 	},
-/obj/structure/sign/directions/all{
-	dir = 1;
-	icon_state = "direction_all";
-	pixel_x = 0;
-	pixel_y = -32
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
 	},
-/obj/structure/sign/directions/cryo{
-	dir = 4;
-	icon_state = "direction_cryo";
-	pixel_x = 0;
-	pixel_y = -40
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/fore)
@@ -14466,15 +14464,16 @@
 /turf/simulated/floor/plating,
 /area/crew_quarters/locker)
 "As" = (
-/obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/mime,
-/obj/machinery/camera/network/civilian_east{
-	c_tag = "Surface - Dormitories Fore";
-	pixel_y = 0
-	},
+/turf/simulated/wall,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom First"
+	})
+"At" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/material/ashtray/glass,
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/bedrooms)
-"At" = (
+"Au" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
@@ -14482,11 +14481,6 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/carpet,
-/area/crew_quarters/sleep/bedrooms)
-"Au" = (
-/obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/mime,
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/bedrooms)
 "Av" = (
@@ -14624,10 +14618,20 @@
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/fitness)
 "AK" = (
-/obj/structure/table/rack,
-/obj/random/loot,
-/turf/simulated/floor/plating,
-/area/maintenance/arrivals)
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/turf/simulated/floor/carpet,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom First"
+	})
 "AL" = (
 /obj/structure/bed/padded,
 /obj/item/weapon/bedsheet/mime,
@@ -14803,6 +14807,26 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/bedrooms)
 "Bb" = (
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/obj/structure/bed/chair/comfy/black{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/sleep/bedrooms)
+"Bc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
@@ -14810,11 +14834,6 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/carpet,
-/area/crew_quarters/sleep/bedrooms)
-"Bc" = (
-/obj/item/weapon/bedsheet/mime,
-/obj/structure/bed/padded,
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/bedrooms)
 "Bd" = (
@@ -14989,33 +15008,38 @@
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/fitness)
 "Bs" = (
-/obj/structure/reagent_dispensers/watertank,
-/turf/simulated/floor/plating,
-/area/maintenance/arrivals)
+/turf/simulated/wall,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Two"
+	})
 "Bt" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/floor/plating,
 /area/maintenance/arrivals)
 "Bu" = (
-/obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/mime,
+/turf/simulated/wall,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Four"
+	})
+"Bv" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /obj/machinery/light/small{
 	dir = 8
 	},
+/obj/machinery/vending/coffee,
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/bedrooms)
-"Bv" = (
+"Bw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/carpet,
-/area/crew_quarters/sleep/bedrooms)
-"Bw" = (
-/obj/machinery/light_switch{
-	pixel_x = 22;
-	pixel_y = 10
+/obj/machinery/light/small{
+	dir = 4;
+	pixel_y = 0
 	},
-/obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/mime,
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/bedrooms)
 "Bx" = (
@@ -15100,22 +15124,46 @@
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/fitness)
 "BI" = (
-/obj/structure/closet/secure_closet/personal,
-/obj/machinery/atmospherics/unary/vent_pump/on{
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/bedrooms)
 "BJ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9;
-	pixel_y = 0
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/bedrooms)
 "BK" = (
-/obj/structure/closet/secure_closet/personal,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	icon_state = "intact-supply";
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/bedrooms)
 "BL" = (
@@ -15182,7 +15230,8 @@
 	icon_state = "alarm0";
 	pixel_x = 24
 	},
-/obj/structure/closet/secure_closet/personal,
+/obj/structure/bedsheetbin,
+/obj/structure/table/woodentable,
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/bedrooms)
 "BW" = (
@@ -15226,19 +15275,26 @@
 /turf/simulated/floor/plating,
 /area/crew_quarters/fitness)
 "Cb" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
+/obj/machinery/door/airlock{
+	id_tag = "Dorms 3";
+	name = "Bedroom"
 	},
-/turf/simulated/floor/carpet,
-/area/crew_quarters/sleep/bedrooms)
-"Cc" = (
-/obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/mime,
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/wood,
-/area/crew_quarters/sleep/bedrooms)
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Three"
+	})
+"Cc" = (
+/turf/simulated/wall,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Three"
+	})
 "Cd" = (
 /obj/structure/curtain/open/shower,
 /obj/machinery/shower{
@@ -15319,8 +15375,23 @@
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/aft)
 "Cn" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
+	},
 /turf/simulated/floor/carpet,
-/area/crew_quarters/sleep/bedrooms)
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Three"
+	})
 "Co" = (
 /obj/machinery/light,
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -15358,17 +15429,16 @@
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/aft)
 "Cs" = (
-/obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/mime,
-/obj/machinery/light/small{
-	dir = 4
+/obj/structure/bed/chair/comfy/black,
+/obj/machinery/alarm{
+	dir = 8;
+	icon_state = "alarm0";
+	pixel_x = 24
 	},
-/obj/machinery/light_switch{
-	pixel_x = 22;
-	pixel_y = 10
-	},
-/turf/simulated/floor/wood,
-/area/crew_quarters/sleep/bedrooms)
+/turf/simulated/floor/carpet,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Three"
+	})
 "Ct" = (
 /obj/structure/cable/green{
 	d2 = 4;
@@ -15413,14 +15483,17 @@
 /turf/simulated/floor/plating,
 /area/bridge/levela)
 "Cw" = (
-/obj/structure/bed/padded,
-/obj/item/weapon/bedsheet/mime,
+/obj/structure/table/woodentable,
+/obj/item/weapon/paper,
+/obj/item/device/flashlight/lamp/green,
 /obj/machinery/camera/network/civilian_east{
-	c_tag = "Surface - Dormitories Aft";
+	c_tag = "Dorms 3";
 	dir = 1
 	},
-/turf/simulated/floor/wood,
-/area/crew_quarters/sleep/bedrooms)
+/turf/simulated/floor/carpet,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Three"
+	})
 "Cx" = (
 /turf/simulated/mineral,
 /area/mine/explored)
@@ -19179,6 +19252,676 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/fore)
+"Jn" = (
+/obj/structure/closet/secure_closet/personal,
+/obj/machinery/light,
+/obj/machinery/status_display{
+	pixel_x = 0;
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/locker)
+"Jo" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/sign/directions/cryo{
+	dir = 4;
+	icon_state = "direction_cryo";
+	pixel_x = 0;
+	pixel_y = -40
+	},
+/obj/structure/sign/directions/all{
+	dir = 1;
+	icon_state = "direction_all";
+	pixel_x = 0;
+	pixel_y = -32
+	},
+/obj/structure/sign/directions/evac{
+	dir = 1;
+	icon_state = "direction_evac";
+	pixel_x = 0;
+	pixel_y = -24
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/secondary/entry/fore)
+"Jp" = (
+/obj/machinery/door/airlock{
+	id_tag = "Dormitory 2";
+	name = "Dorm"
+	},
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/sleep/bedrooms)
+"Jq" = (
+/obj/item/weapon/bedsheet/mime,
+/obj/structure/bed,
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/item/device/radio/intercom{
+	pixel_y = 32
+	},
+/obj/machinery/button/remote/airlock{
+	desc = "A remote control-switch for the hatch bolts.";
+	id = "Dorms 2";
+	name = "Door Bolt Control";
+	pixel_x = -24;
+	pixel_y = 10;
+	req_one_access = list();
+	specialfunctions = 4
+	},
+/turf/simulated/floor/carpet,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Two"
+	})
+"Jr" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/paper,
+/obj/item/device/flashlight/lamp/green,
+/obj/machinery/camera/network/civilian_east{
+	c_tag = "Dorms 2";
+	pixel_x = 24
+	},
+/turf/simulated/floor/carpet,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Two"
+	})
+"Js" = (
+/turf/simulated/wall,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Two"
+	})
+"Jt" = (
+/obj/item/weapon/bedsheet/mime,
+/obj/structure/bed,
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/item/device/radio/intercom{
+	pixel_y = 32
+	},
+/obj/machinery/button/remote/airlock{
+	desc = "A remote control-switch for the hatch bolts.";
+	id = "Dorms 1";
+	name = "Door Bolt Control";
+	pixel_x = -24;
+	pixel_y = 10;
+	req_one_access = list();
+	specialfunctions = 4
+	},
+/turf/simulated/floor/carpet,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom First"
+	})
+"Ju" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/paper,
+/obj/item/device/flashlight/lamp/green,
+/obj/machinery/camera/network/civilian_east{
+	c_tag = "Dorms 1";
+	pixel_x = 24
+	},
+/turf/simulated/floor/carpet,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom First"
+	})
+"Jv" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/turf/simulated/floor/carpet,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Two"
+	})
+"Jw" = (
+/obj/structure/bed/chair/comfy/black{
+	dir = 1
+	},
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 25;
+	pixel_y = 0
+	},
+/turf/simulated/floor/carpet,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Two"
+	})
+"Jx" = (
+/turf/simulated/wall,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Two"
+	})
+"Jy" = (
+/obj/structure/bed/chair/comfy/black{
+	dir = 1
+	},
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 25;
+	pixel_y = 0
+	},
+/turf/simulated/floor/carpet,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom First"
+	})
+"Jz" = (
+/obj/structure/bed/chair/comfy/black{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/sleep/bedrooms)
+"JA" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/simulated/floor/carpet,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Two"
+	})
+"JB" = (
+/obj/structure/closet/secure_closet/personal,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/item/weapon/handcuffs/cable/pink,
+/turf/simulated/floor/carpet,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Two"
+	})
+"JC" = (
+/turf/simulated/wall,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Two"
+	})
+"JD" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/simulated/floor/carpet,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom First"
+	})
+"JE" = (
+/obj/structure/closet/secure_closet/personal,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/simulated/floor/carpet,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom First"
+	})
+"JF" = (
+/obj/machinery/door/airlock{
+	id_tag = "Dorms 2";
+	name = "Bedroom"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Two"
+	})
+"JG" = (
+/obj/machinery/door/airlock{
+	id_tag = "Dorms 1";
+	name = "Bedroom"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom First"
+	})
+"JH" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/sleep/bedrooms)
+"JI" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/sleep/bedrooms)
+"JJ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/sleep/bedrooms)
+"JK" = (
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/sleep/bedrooms)
+"JL" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/sleep/bedrooms)
+"JM" = (
+/obj/machinery/door/airlock{
+	name = "Unisex Restrooms"
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/sleep/bedrooms)
+"JN" = (
+/obj/machinery/door/airlock/maintenance{
+	req_access = list(12)
+	},
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/plating,
+/area/maintenance/arrivals)
+"JO" = (
+/turf/simulated/floor/wood,
+/area/crew_quarters/sleep/bedrooms)
+"JP" = (
+/turf/simulated/floor/wood,
+/area/crew_quarters/sleep/bedrooms)
+"JQ" = (
+/turf/simulated/floor/wood,
+/area/crew_quarters/sleep/bedrooms)
+"JR" = (
+/turf/simulated/floor/wood,
+/area/crew_quarters/sleep/bedrooms)
+"JS" = (
+/obj/machinery/door/airlock{
+	id_tag = "Dorms 5";
+	name = "Bedroom"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Five"
+	})
+"JT" = (
+/turf/simulated/wall,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Five"
+	})
+"JU" = (
+/turf/simulated/wall,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Five"
+	})
+"JV" = (
+/obj/machinery/door/airlock{
+	id_tag = "Dorms 4";
+	name = "Bedroom"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Four"
+	})
+"JW" = (
+/turf/simulated/wall,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Four"
+	})
+"JX" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/simulated/floor/carpet,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Five"
+	})
+"JY" = (
+/obj/structure/closet/secure_closet/personal,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/simulated/floor/carpet,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Five"
+	})
+"JZ" = (
+/turf/simulated/wall,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Five"
+	})
+"Ka" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/simulated/floor/carpet,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Four"
+	})
+"Kb" = (
+/obj/structure/closet/secure_closet/personal,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/simulated/floor/carpet,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Four"
+	})
+"Kc" = (
+/obj/structure/closet/secure_closet/personal,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/simulated/floor/carpet,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Three"
+	})
+"Kd" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	icon_state = "intact-scrubbers";
+	dir = 1
+	},
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/obj/structure/cable/green,
+/turf/simulated/floor/carpet,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Five"
+	})
+"Ke" = (
+/obj/structure/bed/chair/comfy/black,
+/obj/machinery/alarm{
+	dir = 8;
+	icon_state = "alarm0";
+	pixel_x = 24
+	},
+/turf/simulated/floor/carpet,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Five"
+	})
+"Kf" = (
+/turf/simulated/wall,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Five"
+	})
+"Kg" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	icon_state = "intact-scrubbers";
+	dir = 1
+	},
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/obj/structure/cable/green,
+/turf/simulated/floor/carpet,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Four"
+	})
+"Kh" = (
+/obj/structure/bed/chair/comfy/black,
+/obj/machinery/alarm{
+	dir = 8;
+	icon_state = "alarm0";
+	pixel_x = 24
+	},
+/turf/simulated/floor/carpet,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Four"
+	})
+"Ki" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	icon_state = "intact-scrubbers";
+	dir = 1
+	},
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/obj/structure/cable/green,
+/turf/simulated/floor/carpet,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Three"
+	})
+"Kj" = (
+/obj/item/weapon/bedsheet/mime,
+/obj/structure/bed,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/obj/machinery/button/remote/airlock{
+	desc = "A remote control-switch for the hatch bolts.";
+	id = "Dorms 5";
+	name = "Door Bolt Control";
+	pixel_x = -24;
+	pixel_y = -10;
+	req_one_access = list();
+	specialfunctions = 4
+	},
+/obj/item/device/radio/intercom{
+	pixel_y = -32
+	},
+/turf/simulated/floor/carpet,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Five"
+	})
+"Kk" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/paper,
+/obj/item/device/flashlight/lamp/green,
+/obj/machinery/camera/network/civilian_east{
+	c_tag = "Dorms 5";
+	dir = 1
+	},
+/turf/simulated/floor/carpet,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Five"
+	})
+"Kl" = (
+/turf/simulated/wall,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Five"
+	})
+"Km" = (
+/obj/item/weapon/bedsheet/mime,
+/obj/structure/bed,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/obj/machinery/button/remote/airlock{
+	desc = "A remote control-switch for the hatch bolts.";
+	id = "Dorms 4";
+	name = "Door Bolt Control";
+	pixel_x = -24;
+	pixel_y = -10;
+	req_one_access = list();
+	specialfunctions = 4
+	},
+/obj/item/device/radio/intercom{
+	pixel_y = -32
+	},
+/turf/simulated/floor/carpet,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Four"
+	})
+"Kn" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/paper,
+/obj/item/device/flashlight/lamp/green,
+/obj/machinery/camera/network/civilian_east{
+	c_tag = "Dorms 4";
+	dir = 1
+	},
+/turf/simulated/floor/carpet,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Four"
+	})
+"Ko" = (
+/obj/item/weapon/bedsheet/mime,
+/obj/structure/bed,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/obj/machinery/button/remote/airlock{
+	desc = "A remote control-switch for the hatch bolts.";
+	id = "Dorms 3";
+	name = "Door Bolt Control";
+	pixel_x = -24;
+	pixel_y = -10;
+	req_one_access = list();
+	specialfunctions = 4
+	},
+/obj/item/device/radio/intercom{
+	pixel_y = -32
+	},
+/turf/simulated/floor/carpet,
+/area/crew_quarters/sleep/bedrooms{
+	name = "\improper Dormitory Bedroom Three"
+	})
 
 (1,1,1) = {"
 aa
@@ -42154,9 +42897,9 @@ eR
 IF
 gp
 hm
-hY
-hY
-hY
+IF
+IF
+IF
 IK
 kg
 fz
@@ -43487,16 +44230,16 @@ yH
 zi
 zE
 uj
-uj
+sP
 sP
 sr
-ag
-ag
-ag
-ag
-ag
-ag
-ag
+sr
+sr
+sr
+sr
+sr
+sr
+sr
 sr
 sP
 sP
@@ -43742,19 +44485,19 @@ xD
 yi
 yI
 vK
-vK
 Ab
 Ar
 sP
-sr
-ag
-ag
-ag
-ag
-ag
-ag
-ag
-sr
+sP
+Ij
+sP
+sP
+sP
+sP
+sP
+sP
+sP
+sP
 sP
 sr
 sr
@@ -43968,8 +44711,8 @@ mw
 mI
 gs
 IT
-IY
-Jg
+IT
+IT
 gs
 nU
 oj
@@ -43999,18 +44742,18 @@ vK
 vK
 yJ
 vK
-vK
-Ac
+Jn
 uj
-sP
 sr
-ag
-ag
-ag
-ag
-ag
-ag
-ag
+sr
+sr
+sr
+sr
+JN
+sr
+sr
+sr
+sr
 sr
 sP
 sr
@@ -44257,17 +45000,17 @@ yj
 yK
 zj
 zF
-Iu
 uj
-sP
-sr
-sr
-sr
-ag
-ag
-ag
-ag
-ag
+Jq
+Jv
+JA
+JF
+JH
+Au
+JS
+JX
+Kd
+Kj
 sr
 sP
 sr
@@ -44513,18 +45256,18 @@ wJ
 yk
 yJ
 zk
-zG
 Ae
 uj
-sP
-sP
+Jr
+Jw
+JB
 Bs
-sr
-ag
-ag
-ag
-ag
-ag
+JI
+JO
+JT
+JY
+Ke
+Kk
 sr
 sP
 sr
@@ -44770,18 +45513,18 @@ wK
 wJ
 yJ
 zl
-vK
 Ad
 uj
-sP
-sP
-Bt
-sr
-sr
-sr
-sr
-sr
-sr
+Js
+Jx
+JC
+Bs
+JJ
+JP
+JU
+JZ
+Kf
+Kl
 sr
 sP
 sr
@@ -44992,7 +45735,7 @@ lH
 jR
 jT
 mx
-IP
+IO
 jz
 mK
 IW
@@ -45027,19 +45770,19 @@ vK
 yl
 yJ
 zl
-vK
-Af
+Ac
 uj
+Jt
 AK
-Ij
-sP
-sP
-sP
-sP
-sP
-sP
-sQ
-sP
+JD
+JG
+JK
+Au
+JV
+Ka
+Kg
+Km
+sr
 sP
 sr
 ag
@@ -45286,16 +46029,16 @@ yL
 zm
 zH
 uj
-uj
-Ag
-Ag
-Ag
-Ag
-Ag
-Ag
-Ag
-Ag
-Ag
+Ju
+Jy
+JE
+As
+JL
+JQ
+JW
+Kb
+Kh
+Kn
 sr
 sP
 sr
@@ -45544,15 +46287,15 @@ zn
 zI
 Ag
 As
-AL
-Ba
-Bu
+As
+As
+As
 BI
-BK
+JR
 Bu
-Au
-AL
-Au
+Bu
+Bu
+Bu
 sr
 sP
 sr
@@ -45798,19 +46541,19 @@ kO
 kO
 kO
 zo
-on
-Ah
+Jo
+Ag
 At
-At
+Jz
 Bb
 Bv
 BJ
-BU
+Au
 Cb
 Cn
-Cn
-Cn
-CE
+Ki
+Ko
+sr
 sP
 sr
 ag
@@ -46056,15 +46799,15 @@ jA
 jA
 iL
 zJ
-Ag
+Jp
 Au
-AM
+Au
 Bc
 Bw
 BK
 BV
 Cc
-Bc
+Kc
 Cs
 Cw
 sr
@@ -46318,12 +47061,12 @@ Ag
 Ag
 Ag
 Ag
+JM
 Ag
-Ag
-Ag
-Ag
-Ag
-Ag
+Cc
+Cc
+Cc
+Cc
 sr
 sP
 sr
