@@ -377,7 +377,7 @@
 	if(needs_update && ishuman(M))
 		var/mob/living/carbon/human/H = M
 		H.update_mutations()
-	M.adjustCloneLoss(-10)
+	M.adjustCloneLoss(-1)
 
 /datum/reagent/hyperzine
 	name = "Hyperzine"
