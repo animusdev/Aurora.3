@@ -334,7 +334,7 @@
 	color = "#DB5008"
 	metabolism = REM * 2
 	touch_met = 50 // It's acid!
-	var/power = 4
+	var/power = 15
 	var/meltdose = 10 // How much is needed to melt
 	taste_description = "acid"
 
@@ -418,7 +418,7 @@
 	description = "A very corrosive mineral acid with the molecular formula HCl."
 	reagent_state = LIQUID
 	color = "#808080"
-	power = 3
+	power = 10
 	meltdose = 8
 	taste_description = "stomach acid"
 
