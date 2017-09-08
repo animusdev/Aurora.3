@@ -7,7 +7,7 @@
 	reagent_state = LIQUID
 	color = "#CF3600"
 	metabolism = REM * 0.1 // 0.02 by default. They last a while and slowly kill you.
-	var/strength = 4 // How much damage it deals per unit
+	var/strength = 8 // How much damage it deals per unit
 	taste_description = "bitterness"
 	taste_mult = 1.2
 
@@ -30,7 +30,7 @@
 	description = "A powerful poison derived from certain species of mushroom."
 	reagent_state = LIQUID
 	color = "#792300"
-	strength = 10
+	strength = 20
 	taste_description = "mushroom"
 
 /datum/reagent/toxin/carpotoxin
@@ -39,7 +39,7 @@
 	description = "A deadly neurotoxin produced by the dreaded space carp."
 	reagent_state = LIQUID
 	color = "#003333"
-	strength = 10
+	strength = 35
 	taste_description = "fish"
 
 /datum/reagent/toxin/carpotoxin/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
@@ -103,7 +103,7 @@
 	description = "A highly toxic chemical."
 	reagent_state = LIQUID
 	color = "#CF3600"
-	strength = 20
+	strength = 50
 	metabolism = REM * 2
 	taste_mult = 1.5
 
@@ -112,6 +112,7 @@
 	var/mob/living/carbon/human/H = M
 	if(istype(H) && (H.species.flags & NO_BLOOD))
 		return
+	M.adjustToxLoss(30 * removed)
 	M.adjustOxyLoss(20 * removed)
 	M.sleeping += 1
 
@@ -133,7 +134,8 @@
 	if(H.stat != 1)
 		if(H.losebreath >= 10)
 			H.losebreath = max(10, H.losebreath - 10)
-		H.adjustOxyLoss(2)
+		H.adjustOxyLoss(5)
+		H.adjustToxLoss(10)
 		H.Weaken(10)
 
 /datum/reagent/toxin/potassium_chlorophoride
@@ -253,7 +255,7 @@
 	description = "Polytrinic acid is a an extremely corrosive chemical substance."
 	reagent_state = LIQUID
 	color = "#8E18A9"
-	power = 6
+	power = 10
 	meltdose = 4
 	taste_description = "acid"
 
@@ -272,7 +274,8 @@
 	var/mob/living/carbon/human/H = M
 	if(istype(H) && (H.species.flags & NO_BLOOD))
 		return
-	M.adjustOxyLoss(2 * removed)
+	M.adjustOxyLoss(8 * removed)
+	M.adjustToxLoss(20 * removed)
 	if(M.losebreath < 15)
 		M.losebreath++
 
@@ -385,7 +388,7 @@
 		M.sleeping = max(M.sleeping, 30)
 
 	if(dose > 1)
-		M.adjustToxLoss(removed)
+		M.adjustToxLoss(30 * removed)
 
 /datum/reagent/chloralhydrate/beer2 //disguised as normal beer for use by emagged brobots
 	name = "Beer"
@@ -420,6 +423,7 @@
 	if(istype(H) && (H.species.flags & NO_BLOOD))
 		return
 	M.druggy = max(M.druggy, 15)
+	M.adjustBrainLoss(1 * removed)
 	if(prob(10) && isturf(M.loc) && !istype(M.loc, /turf/space) && M.canmove && !M.restrained())
 		step(M, pick(cardinal))
 	if(prob(7))
@@ -480,7 +484,7 @@
 		return
 	M.jitteriness = max(M.jitteriness - 5, 0)
 	if(prob(80))
-		M.adjustBrainLoss(3 * removed)
+		M.adjustBrainLoss(5 * removed)
 	if(prob(50))
 		M.drowsyness = max(M.drowsyness, 3)
 	if(prob(10))

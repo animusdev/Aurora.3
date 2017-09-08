@@ -51,7 +51,7 @@
 					healpower = W.heal_damage(healpower,1)
 					if (healpower <= 0)
 						return
-		M.adjustBruteLoss(7) //but not without a price, of course
+		M.adjustToxLoss(7) //but not without a price, of course
 
 /datum/reagent/kelotane
 	name = "Kelotane"
@@ -69,7 +69,7 @@
 
 /datum/reagent/kelotane/overdose(var/mob/living/carbon/M, var/alien)
 	if(alien != IS_DIONA)
-		M.adjustFireLoss(8)
+		M.adjustToxLoss(8)
 
 /datum/reagent/dermaline
 	name = "Dermaline"
@@ -77,7 +77,7 @@
 	description = "Dermaline is the next step in burn medication. Works twice as good as kelotane and enables the body to restore even the direst heat-damaged tissue."
 	reagent_state = LIQUID
 	color = "#FF8000"
-	overdose = REAGENTS_OVERDOSE * 0.5
+	overdose = REAGENTS_OVERDOSE
 	scannable = 1
 	taste_description = "bitterness"
 	taste_mult = 1.5
@@ -88,7 +88,7 @@
 
 /datum/reagent/dermaline/overdose(var/mob/living/carbon/M, var/alien)
 	if(alien != IS_DIONA)
-		M.adjustFireLoss(15)
+		M.adjustToxLoss(12)
 
 /datum/reagent/dylovene
 	name = "Dylovene"
@@ -122,15 +122,15 @@
 
 /datum/reagent/dexalin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_VOX)
-		M.adjustToxLoss(removed * 6)
+		M.adjustToxLoss(removed * 10)
 	else if(alien != IS_DIONA)
 		M.adjustOxyLoss(-15 * removed)
 
-	holder.remove_reagent("lexorin", 2 * removed)
+	holder.remove_reagent("lexorin", 5 * removed)
 
 /datum/reagent/dexalin/overdose(var/mob/living/carbon/M, var/alien)
 	if(alien != IS_DIONA)
-		M.adjustOxyLoss(20)
+		M.adjustToxLoss(10)
 
 /datum/reagent/dexalinp
 	name = "Dexalin Plus"
@@ -157,7 +157,7 @@
 	reagent_state = LIQUID
 	color = "#8040FF"
 	scannable = 1
-	overdose = REAGENTS_OVERDOSE
+	overdose = REAGENTS_OVERDOSE * 2
 	taste_description = "bitterness"
 
 /datum/reagent/tricordrazine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
@@ -168,8 +168,7 @@
 
 /datum/reagent/tricordrazine/overdose(var/mob/living/carbon/M, var/alien)
 	if(alien != IS_DIONA)
-		M.adjustToxLoss(6)
-		M.adjustOxyLoss(8)
+		M.adjustBrainLoss(5)
 
 /datum/reagent/cryoxadone
 	name = "Cryoxadone"
@@ -224,6 +223,7 @@
 /datum/reagent/paracetamol/overdose(var/mob/living/carbon/M, var/alien)
 	..()
 	M.hallucination = max(M.hallucination, 25)
+	M.adjustToxLoss(2)
 
 /datum/reagent/tramadol
 	name = "Tramadol"
@@ -242,6 +242,7 @@
 /datum/reagent/tramadol/overdose(var/mob/living/carbon/M, var/alien)
 	..()
 	M.hallucination = max(M.hallucination, 40)
+	M.adjustToxLoss(5)
 
 /datum/reagent/oxycodone
 	name = "Oxycodone"
@@ -260,6 +261,7 @@
 	..()
 	M.druggy = max(M.druggy, 10)
 	M.hallucination = max(M.hallucination, 60)
+	M.adjustToxLoss(10)
 
 /* Other medicine */
 
@@ -350,6 +352,11 @@
 			if((I.damage > 0) && (I.robotic != 2)) //Peridaxon heals only non-robotic organs
 				I.damage = max(I.damage - removed, 0)
 
+/datum/reagent/peridaxon/overdose(var/mob/living/carbon/M, var/alien, var/removed)
+	if(alien != IS_DIONA)
+		M.hallucination = max(M.hallucination, 60)
+		M.adjustToxLoss(10 * removed)
+
 /datum/reagent/ryetalyn
 	name = "Ryetalyn"
 	id = "ryetalyn"
@@ -370,6 +377,7 @@
 	if(needs_update && ishuman(M))
 		var/mob/living/carbon/human/H = M
 		H.update_mutations()
+	M.adjustCloneLoss(-1)
 
 /datum/reagent/hyperzine
 	name = "Hyperzine"
