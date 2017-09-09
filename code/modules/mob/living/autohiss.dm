@@ -42,10 +42,10 @@
 
 /datum/species/unathi
 	autohiss_basic_map = list(
-			"s" = list("ss", "sss", "ssss")
+			"ñ" = list("ññ", "ñññ", "ññññ")
 		)
 	autohiss_extra_map = list(
-			"x" = list("ks", "kss", "ksss")
+			"êñ" = list("êñ", "êññ", "êñññ")
 		)
 	autohiss_exempt = list(
 			LANGUAGE_UNATHI,
@@ -54,7 +54,7 @@
 
 /datum/species/tajaran
 	autohiss_basic_map = list(
-			"r" = list("rr", "rrr", "rrrr")
+			"ð" = list("ðð", "ððð", "ðððð")
 		)
 	autohiss_exempt = list(
 			LANGUAGE_SIIK_MAAS,
@@ -64,21 +64,19 @@
 
 /datum/species/bug
 	autohiss_basic_map = list(
-			"s" = list("z","zz")
+			"ñ" = list("ç","çç")
 		)
 	autohiss_extra_map = list(
-			"f" = list("v", "vh"),
-			"ph" = list("v", "vh")
+			"ô" = list("â", "âõ")
 		)
 	autohiss_exempt = list(LANGUAGE_VAURCA)
 
 /datum/species/bug/type_b
 	autohiss_basic_map = list(
-			"s" = list("z","zz", "zzz")
+			"ñ" = list("ç","çç", "ççç")
 		)
 	autohiss_extra_map = list(
-			"f" = list("v", "vh"),
-			"ph" = list("v", "vh")
+			"ô" = list("â", "âõ"),
 		)
 	autohiss_exempt = list(LANGUAGE_VAURCA)
 
