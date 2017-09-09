@@ -23,6 +23,7 @@
 			            access_heads, access_hos, access_RC_announce, access_keycard_auth, access_gateway, access_external_airlocks,
 				    access_detective)
 	minimal_player_age = 14
+	minimal_player_age = 25
 
 	bag_type = /obj/item/weapon/storage/backpack/security
 	satchel_type = /obj/item/weapon/storage/backpack/satchel_sec
@@ -64,6 +65,7 @@
 	access = list(access_security, access_eva, access_sec_doors, access_brig, access_armory, access_maint_tunnels, access_morgue, access_external_airlocks)
 	minimal_access = list(access_security, access_eva, access_sec_doors, access_brig, access_armory, access_maint_tunnels, access_external_airlocks)
 	minimal_player_age = 7
+	minimum_character_age = 23
 
 	bag_type = /obj/item/weapon/storage/backpack/security
 	satchel_type = /obj/item/weapon/storage/backpack/satchel_sec
@@ -108,7 +110,7 @@
 	access = list(access_security, access_sec_doors, access_forensics_lockers, access_morgue, access_maint_tunnels, access_detective)
 	minimal_access = list(access_security, access_sec_doors, access_morgue, access_maint_tunnels, access_detective)
 	minimal_player_age = 7
-
+	minimum_character_age = 23
 
 	equip(var/mob/living/carbon/human/H)
 		if(!H)
@@ -145,6 +147,7 @@
 	minimal_access = list(access_security, access_sec_doors, access_forensics_lockers, access_morgue, access_maint_tunnels)
 	alt_titles = list("Crime Scene Investigator")
 	minimal_player_age = 3
+	minimum_character_age = 23
 
 	equip(var/mob/living/carbon/human/H, var/alt_title)
 		if(!H)
@@ -185,7 +188,8 @@
 	economic_modifier = 4
 	access = list(access_security, access_eva, access_sec_doors, access_brig, access_maint_tunnels, access_morgue, access_external_airlocks)
 	minimal_access = list(access_security, access_eva, access_sec_doors, access_brig, access_maint_tunnels, access_external_airlocks)
-	minimal_player_age = 7
+	minimal_player_age = 3
+	minimal_player_age = 19
 
 	bag_type = /obj/item/weapon/storage/backpack/security
 	satchel_type = /obj/item/weapon/storage/backpack/satchel_sec

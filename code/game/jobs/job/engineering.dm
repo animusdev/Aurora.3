@@ -13,8 +13,9 @@
 	req_admin_notify = 1
 	economic_modifier = 10
 
+	minimum_character_age = 24
 	ideal_character_age = 50
-
+	minimal_player_age = 14
 
 	access = list(access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels,
 			            access_teleporter, access_external_airlocks, access_atmospherics, access_emergency_storage, access_eva,
@@ -64,6 +65,8 @@
 	access = list(access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_external_airlocks, access_construction, access_atmospherics)
 	minimal_access = list(access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_external_airlocks, access_construction)
 	alt_titles = list("Maintenance Technician","Engine Technician","Electrician")
+	minimum_character_age = 20
+	minimal_player_age = 1
 
 	bag_type = /obj/item/weapon/storage/backpack/industrial
 	satchel_type = /obj/item/weapon/storage/backpack/satchel_eng
