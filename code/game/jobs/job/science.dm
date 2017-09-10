@@ -21,6 +21,7 @@
 			            access_research, access_robotics, access_xenobiology, access_ai_upload, access_tech_storage,
 			            access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_network, access_maint_tunnels)
 	minimal_player_age = 14
+	minimum_character_age = 29
 	ideal_character_age = 50
 
 	bag_type = /obj/item/weapon/storage/backpack/toxins
@@ -55,7 +56,8 @@
 	minimal_access = list(access_tox, access_tox_storage, access_research, access_xenoarch)
 	alt_titles = list("Xenoarcheologist", "Anomalist", "Phoron Researcher")
 
-	minimal_player_age = 14
+	minimum_character_age = 23
+	minimal_player_age = 10
 
 	bag_type = /obj/item/weapon/storage/backpack/toxins
 	satchel_type = /obj/item/weapon/storage/backpack/satchel_tox
@@ -87,6 +89,7 @@
 	alt_titles = list("Xenobotanist")
 
 	minimal_player_age = 14
+	minimum_character_age = 23
 
 	bag_type = /obj/item/weapon/storage/backpack/toxins
 	satchel_type = /obj/item/weapon/storage/backpack/satchel_tox

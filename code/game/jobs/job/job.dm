@@ -126,7 +126,7 @@
 	if (config.age_restrictions[lowertext(title)])
 		minimal_player_age = config.age_restrictions[lowertext(title)]
 	else
-		minimal_player_age = 0
+		return //minimal_player_age = 0 \ < Removed
 
 /datum/job/proc/late_equip(var/mob/living/carbon/human/H)
 	if(!H)
