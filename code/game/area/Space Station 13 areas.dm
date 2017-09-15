@@ -201,13 +201,10 @@ area/space/atmosalert()
 /area/shuttle/mining/station
 	icon_state = "shuttle2"
 	station_area = 1
-	flags = RAD_SHIELDED | SPAWN_ROOF
-
-/area/shuttle/mining
-	icon_state = "shuttle2"
 
 /area/shuttle/mining/outpost
 	icon_state = "shuttle"
+	station_area = 1
 
 /area/shuttle/transport1/centcom
 	icon_state = "shuttle"
@@ -270,11 +267,7 @@ area/space/atmosalert()
 
 /area/shuttle/research/outpost
 	icon_state = "shuttle"
-
-/area/shuttle/alien/mine
-	icon_state = "shuttle"
-	name = "\improper Alien Shuttle Mine"
-	requires_power = 1
+	station_area = 1
 
 // CENTCOM
 
@@ -506,80 +499,6 @@ area/space/atmosalert()
 	name = "\improper Caverns"
 	icon_state = "southeast"
 	station_area = 1
-	base_turf = /turf/simulated/floor/asteroid
-
-//For Exodus
-/area/syndicate_station/southwest
-	name = "south-west of SS13"
-	icon_state = "southwest"
-
-/area/syndicate_station/northwest
-	name = "north-west of SS13"
-	icon_state = "northwest"
-
-/area/syndicate_station/northeast
-	name = "north-east of SS13"
-	icon_state = "northeast"
-
-/area/syndicate_station/southeast
-	name = "south-east of SS13"
-	icon_state = "southeast"
-
-/area/syndicate_station/north
-	name = "north of SS13"
-	icon_state = "north"
-
-/area/syndicate_station/south
-	name = "south of SS13"
-	icon_state = "south"
-
-/area/syndicate_station/commssat
-	name = "south of the communication satellite"
-	icon_state = "south"
-
-/area/syndicate_station/mining
-	name = "northeast of the mining station"
-	icon_state = "north"
-	base_turf = /turf/simulated/floor/asteroid
-
-/area/syndicate_station/arrivals_dock
-	name = "docked with station"
-	icon_state = "shuttle"
-
-/area/syndicate_station/transit
-	name = "\proper bluespace"
-	icon_state = "shuttle"
-	base_turf = /turf/space/transit/north
-
-/area/skipjack_station
-	name = "\improper Skipjack"
-	icon_state = "yellow"
-	requires_power = 0
-
-/area/skipjack_station/transit
-	name = "\proper bluespace"
-	icon_state = "shuttle"
-	base_turf = /turf/space/transit/north
-
-/area/skipjack_station/southwest_solars
-	name = "aft port solars"
-	icon_state = "southwest"
-
-/area/skipjack_station/northwest_solars
-	name = "fore port solars"
-	icon_state = "northwest"
-
-/area/skipjack_station/northeast_solars
-	name = "fore starboard solars"
-	icon_state = "northeast"
-
-/area/skipjack_station/southeast_solars
-	name = "aft starboard solars"
-	icon_state = "southeast"
-
-/area/skipjack_station/mining
-	name = "south of mining station"
-	icon_state = "north"
 	base_turf = /turf/simulated/floor/asteroid
 
 ////////////////////
@@ -1319,10 +1238,6 @@ area/space/atmosalert()
 
 //Teleporter
 
-/area/gateway
-	name = "\improper Gateway"
-	icon_state = "teleporter"
-
 /area/teleporter
 	name = "\improper Teleporter"
 	icon_state = "teleporter"
@@ -1435,11 +1350,6 @@ area/space/atmosalert()
 
 /area/medical/surgery
 	name = "\improper Operating Theatre"
-	icon_state = "surgery"
-	no_light_control = 1
-
-/area/medical/surgery2
-	name = "\improper Operating Theatre 2"
 	icon_state = "surgery"
 	no_light_control = 1
 
@@ -2118,20 +2028,8 @@ area/space/atmosalert()
 
 
 //Misc
-/area/AIsattele
-	name = "\improper AI Satellite Teleporter Room"
-	icon_state = "teleporter"
-	ambience = list('sound/ambience/ambimalf.ogg')
 
-/area/alien
-	name = "\improper Alien base"
-	icon_state = "yellow"
-	requires_power = 0
 
-/area/shuttle/alien/base
-	icon_state = "shuttle"
-	name = "\improper Alien Shuttle Base"
-	requires_power = 1
 
 /area/wreck/ai
 	name = "\improper AI Chamber"

@@ -936,7 +936,7 @@
 	dir = 4
 	},
 /obj/structure/window/reinforced,
-/obj/machinery/door/firedoor,
+/obj/machinery/door/firedoor/border_only,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
