@@ -164,7 +164,7 @@ var/datum/controller/subsystem/processing/shuttle/shuttle_controller
 	shuttles["Administration"] = shuttle
 	START_PROCESSING(shuttle_controller, shuttle)
 
-	/*// Public shuttles
+	// Public shuttles
 	shuttle = new()
 	shuttle.warmup_time = 10
 	shuttle.area_offsite = locate(/area/shuttle/constructionsite/site)
@@ -173,7 +173,7 @@ var/datum/controller/subsystem/processing/shuttle/shuttle_controller
 	shuttle.dock_target_station = "engineering_dock_airlock"
 	shuttle.dock_target_offsite = "edock_airlock"
 	shuttles["Engineering"] = shuttle
-	process_shuttles += shuttle
+	START_PROCESSING(shuttle_controller, shuttle)
 
 	shuttle = new()
 	shuttle.warmup_time = 10
@@ -183,7 +183,7 @@ var/datum/controller/subsystem/processing/shuttle/shuttle_controller
 	shuttle.dock_target_station = "mining_dock_airlock"
 	shuttle.dock_target_offsite = "mining_outpost_airlock"
 	shuttles["Mining"] = shuttle
-	process_shuttles += shuttle
+	START_PROCESSING(shuttle_controller, shuttle)
 
 	shuttle = new()
 	shuttle.warmup_time = 10
@@ -193,7 +193,7 @@ var/datum/controller/subsystem/processing/shuttle/shuttle_controller
 	shuttle.dock_target_station = "research_dock_airlock"
 	shuttle.dock_target_offsite = "research_outpost_dock"
 	shuttles["Research"] = shuttle
-	process_shuttles += shuttle*/
+	START_PROCESSING(shuttle_controller, shuttle)
 
 	// ERT Shuttle
 	var/datum/shuttle/ferry/multidock/specops/ERT = new()

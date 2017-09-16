@@ -35,7 +35,7 @@
 	dir = 1
 	},
 /obj/structure/grille,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -46,7 +46,7 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -62,7 +62,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -83,7 +83,7 @@
 	dir = 4
 	},
 /obj/structure/grille,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -129,7 +129,7 @@
 	dir = 4
 	},
 /obj/structure/window/reinforced,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -225,7 +225,7 @@
 /turf/simulated/floor/carpet,
 /area/outpost/research/hallway)
 "aG" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -287,7 +287,7 @@
 /turf/simulated/floor/tiled,
 /area/outpost/research/chemistry)
 "aN" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -342,7 +342,7 @@
 /turf/simulated/floor/tiled,
 /area/outpost/research/chemistry)
 "aU" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -712,7 +712,7 @@
 /turf/simulated/floor/tiled,
 /area/outpost/research/chemistry)
 "bL" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -869,7 +869,7 @@
 /turf/simulated/floor/tiled/freezer,
 /area/outpost/research/hallway)
 "ca" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -941,7 +941,7 @@
 /turf/simulated/floor/tiled,
 /area/outpost/research/kitchen)
 "ci" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -1110,7 +1110,7 @@
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/chemistry)
 "cz" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -1144,7 +1144,7 @@
 /turf/simulated/floor/tiled,
 /area/outpost/research/lab)
 "cC" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 1;
 	name = "Firelock North"
 	},
@@ -1196,7 +1196,7 @@
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/chemistry)
 "cG" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 1;
 	name = "Firelock North"
 	},
@@ -1236,7 +1236,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -1369,7 +1369,7 @@
 /turf/space,
 /area/space)
 "cW" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -1399,7 +1399,7 @@
 	},
 /area/shuttle/alien/mine)
 "cZ" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -1501,7 +1501,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -1674,7 +1674,7 @@
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/hallway)
 "dz" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock East"
 	},
@@ -1770,7 +1770,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -1802,7 +1802,7 @@
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/hallway)
 "dI" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock East"
 	},
@@ -1901,7 +1901,7 @@
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/lab)
 "dP" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -1946,7 +1946,7 @@
 	},
 /area/shuttle/alien/mine)
 "dU" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -1976,7 +1976,7 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -2105,7 +2105,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -2439,7 +2439,7 @@
 	icon_state = "tube1";
 	dir = 4
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -2449,7 +2449,7 @@
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/hallway)
 "eT" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -2463,7 +2463,7 @@
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/hallway)
 "eU" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -2516,7 +2516,7 @@
 	dir = 1
 	},
 /obj/structure/disposalpipe/segment,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -2742,7 +2742,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/disposalpipe/segment,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -2858,7 +2858,7 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -2872,13 +2872,13 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
 /area/outpost/research/dock)
 "fP" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /obj/machinery/door/airlock/external{
@@ -2900,7 +2900,7 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -2913,13 +2913,13 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
 /area/outpost/research/dock)
 "fS" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -2935,7 +2935,7 @@
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/dock)
 "fT" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -2951,7 +2951,7 @@
 /obj/structure/window/reinforced{
 	dir = 5
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -3145,7 +3145,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -3236,7 +3236,7 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -3284,7 +3284,7 @@
 	dir = 5;
 	health = 1e+007
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -3309,13 +3309,13 @@
 /turf/simulated/floor/tiled,
 /area/outpost/research/medical)
 "gH" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	name = "\improper Firelock South"
 	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/hallway)
 "gI" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	name = "\improper Firelock South"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -3328,7 +3328,7 @@
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/hallway)
 "gJ" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -3398,7 +3398,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/grille,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -3520,7 +3520,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -3556,7 +3556,7 @@
 /turf/simulated/floor/tiled,
 /area/outpost/research/dock)
 "hf" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -3611,7 +3611,7 @@
 /turf/simulated/floor/tiled,
 /area/outpost/research/medical)
 "hj" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -3666,7 +3666,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/outpost/research/eva)
 "hn" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -3690,7 +3690,7 @@
 /turf/simulated/floor,
 /area/outpost/abandoned)
 "hq" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 8;
 	name = "Firelock West"
 	},
@@ -3721,7 +3721,7 @@
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/hallway)
 "hu" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -3880,7 +3880,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -3902,7 +3902,7 @@
 	health = 1e+007
 	},
 /obj/structure/sign/greencross,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -3954,7 +3954,7 @@
 /turf/simulated/floor/plating,
 /area/outpost/research/eva)
 "hR" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 8;
 	name = "Firelock West"
 	},
@@ -4026,7 +4026,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -4193,7 +4193,7 @@
 /turf/simulated/floor/airless,
 /area/outpost/abandoned)
 "ie" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -4420,7 +4420,7 @@
 /turf/simulated/wall/r_wall,
 /area/outpost/research/eva)
 "is" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -4517,7 +4517,7 @@
 	dir = 4
 	},
 /obj/structure/window/reinforced,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -4606,7 +4606,7 @@
 	dir = 5;
 	health = 1e+007
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -4650,7 +4650,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -4665,7 +4665,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -4681,7 +4681,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -4693,7 +4693,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -4710,7 +4710,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/visible/supply,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -4718,7 +4718,7 @@
 /area/outpost/research/isolation_monitoring)
 "iT" = (
 /obj/structure/disposalpipe/segment,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -4817,7 +4817,7 @@
 	},
 /area/outpost/abandoned)
 "jd" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -5136,7 +5136,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -5206,7 +5206,7 @@
 /turf/simulated/floor/tiled,
 /area/outpost/research/eva)
 "jR" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -5453,7 +5453,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -6432,7 +6432,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -6446,7 +6446,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -6579,7 +6579,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/grille,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -6612,7 +6612,7 @@
 /turf/simulated/floor/tiled,
 /area/outpost/research/isolation_monitoring)
 "mO" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /obj/machinery/door/airlock/external{
@@ -7214,7 +7214,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/grille,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /obj/machinery/camera/network/research_outpost{
@@ -7224,7 +7224,7 @@
 /turf/simulated/floor/plating,
 /area/outpost/research/eva)
 "od" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /obj/machinery/door/airlock/external{
@@ -7812,7 +7812,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /obj/machinery/camera/network/mining{
@@ -7832,7 +7832,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -8316,7 +8316,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -8388,7 +8388,7 @@
 /turf/simulated/floor/tiled,
 /area/outpost/mining_north)
 "pT" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -9051,7 +9051,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -9332,7 +9332,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -9398,7 +9398,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/grille,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -9416,7 +9416,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/grille,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -9431,7 +9431,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/grille,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -9449,7 +9449,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -9503,7 +9503,7 @@
 	dir = 4
 	},
 /obj/structure/grille,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -9569,7 +9569,7 @@
 	icon_state = "intact";
 	tag = "icon-intact-f (EAST)"
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -9658,7 +9658,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -9787,7 +9787,7 @@
 	dir = 4
 	},
 /obj/structure/grille,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -9847,7 +9847,7 @@
 	icon_state = "intact";
 	tag = "icon-intact-f (EAST)"
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -10225,7 +10225,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/grille,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -10258,7 +10258,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/grille,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -10332,7 +10332,7 @@
 	name = "Telecommunications";
 	req_access = list(10)
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -10362,7 +10362,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/grille,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -10445,7 +10445,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -10469,7 +10469,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/grille,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -10609,7 +10609,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/grille,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -10627,7 +10627,7 @@
 "tH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -10876,7 +10876,7 @@
 	locked = 1;
 	name = "Engineering Outpost"
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -11032,7 +11032,7 @@
 /turf/simulated/wall,
 /area/outpost/engineering/hallway)
 "ur" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -11113,7 +11113,7 @@
 /turf/simulated/floor/tiled,
 /area/outpost/engineering/atmospherics)
 "uB" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -11159,7 +11159,7 @@
 	dir = 4
 	},
 /obj/structure/grille,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -11413,7 +11413,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -11523,7 +11523,7 @@
 	icon_state = "4-8";
 	pixel_x = 0
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -11542,7 +11542,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -11696,7 +11696,7 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -11709,7 +11709,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -11721,7 +11721,7 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -11734,7 +11734,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -11770,7 +11770,7 @@
 	dir = 4
 	},
 /obj/structure/window/reinforced,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -11784,7 +11784,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -11806,7 +11806,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -11826,7 +11826,7 @@
 	locked = 1;
 	name = "Engineering Dock Airlock"
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -11840,7 +11840,7 @@
 	locked = 1;
 	name = "Engineering Dock Airlock"
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -11870,7 +11870,7 @@
 	dir = 1
 	},
 /obj/structure/grille,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -11984,7 +11984,7 @@
 	dir = 8
 	},
 /obj/structure/grille,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -12158,7 +12158,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -12183,7 +12183,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -12646,7 +12646,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -12662,7 +12662,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -12702,7 +12702,7 @@
 	dir = 4
 	},
 /obj/structure/window/reinforced,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -12783,7 +12783,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -12797,7 +12797,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -12811,7 +12811,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -12896,7 +12896,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -12921,7 +12921,7 @@
 	dir = 4
 	},
 /obj/structure/window/reinforced,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -12932,7 +12932,7 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -13088,7 +13088,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -13124,7 +13124,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -13141,7 +13141,7 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -13319,7 +13319,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -13387,7 +13387,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -13407,7 +13407,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -13448,7 +13448,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -13551,7 +13551,7 @@
 /turf/simulated/floor/tiled,
 /area/outpost/mining_main/east_hall)
 "yI" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /obj/machinery/door/airlock/external{
@@ -13597,7 +13597,7 @@
 /turf/simulated/floor/tiled,
 /area/outpost/mining_main/eva)
 "yL" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /obj/machinery/door/airlock/external{
@@ -13743,7 +13743,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -13903,7 +13903,7 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /obj/machinery/camera/network/mining{
@@ -14158,7 +14158,7 @@
 	dir = 4
 	},
 /obj/structure/window/reinforced,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -14172,7 +14172,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -14186,7 +14186,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -14349,7 +14349,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -14377,7 +14377,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -14477,7 +14477,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -14491,7 +14491,7 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -14504,7 +14504,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -14539,7 +14539,7 @@
 	dir = 8
 	},
 /obj/structure/disposalpipe/segment,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -14562,7 +14562,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -14602,7 +14602,7 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -14704,7 +14704,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -14781,7 +14781,7 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -14804,7 +14804,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -14815,7 +14815,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -14828,7 +14828,7 @@
 /turf/simulated/floor/tiled,
 /area/outpost/mining_main/east_hall)
 "AJ" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /obj/machinery/door/airlock/external{
@@ -14882,7 +14882,7 @@
 	},
 /area/mine/explored)
 "AN" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /obj/machinery/door/airlock/external{
@@ -15130,7 +15130,7 @@
 	dir = 8
 	},
 /obj/structure/disposalpipe/segment,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -15193,7 +15193,7 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /obj/machinery/camera/network/mining{
@@ -15317,7 +15317,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -15346,7 +15346,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -15433,7 +15433,7 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -15489,7 +15489,7 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -15499,7 +15499,7 @@
 /turf/simulated/floor/tiled,
 /area/outpost/mining_main/refinery)
 "BL" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /obj/machinery/door/airlock/external{
@@ -15521,7 +15521,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -15532,7 +15532,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -15983,7 +15983,7 @@
 /area/outpost/mining_main/refinery)
 "CI" = (
 /obj/machinery/mineral/input,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /obj/effect/floor_decal/industrial/loading{
@@ -16044,7 +16044,7 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /obj/machinery/camera/network/mining{
@@ -16054,7 +16054,7 @@
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/west_hall)
 "CP" = (
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /obj/machinery/door/airlock/external{
@@ -16113,7 +16113,7 @@
 	dir = 1
 	},
 /obj/structure/grille,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -16223,7 +16223,7 @@
 	name = "KEEP CLEAR: DOCKING AREA";
 	pixel_y = 0
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -16241,7 +16241,7 @@
 	name = "EXTERNAL AIRLOCK";
 	pixel_x = 0
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -16339,7 +16339,7 @@
 	dir = 4
 	},
 /obj/structure/grille,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -16528,7 +16528,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/grille,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -16744,7 +16744,7 @@
 	dir = 1
 	},
 /obj/structure/grille,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -16758,7 +16758,7 @@
 	dir = 1
 	},
 /obj/structure/grille,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -16772,7 +16772,7 @@
 	dir = 1
 	},
 /obj/structure/grille,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -16927,7 +16927,7 @@
 	dir = 8
 	},
 /obj/structure/grille,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /turf/simulated/floor/plating,
@@ -17012,7 +17012,7 @@
 	dir = 8
 	},
 /obj/structure/grille,
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 2
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -17081,7 +17081,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
@@ -17097,7 +17097,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/machinery/door/firedoor/border_only{
+/obj/machinery/door/firedoor{
 	dir = 4;
 	name = "Firelock"
 	},
