@@ -12,8 +12,8 @@
 
 	Look at radio.dm for the prequel to this code.
 */
-
-#define STATION_Z 1
+#define SUBSTATION_Z 1
+#define STATION_Z 2
 #define ASTEROID_Z 5
 
 var/global/list/obj/machinery/telecomms/telecomms_list = list()
@@ -134,7 +134,9 @@ var/global/list/obj/machinery/telecomms/telecomms_list = list()
 	if(!listening_level)
 		listening_level = list(z)
 		listening_level += STATION_Z
+		listening_level += SUBSTATION_Z
 		listening_level += ASTEROID_Z
+
 
 /obj/machinery/telecomms/Destroy()
 	telecomms_list -= src
