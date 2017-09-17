@@ -65,6 +65,9 @@
 /obj/effect/floor_decal/corner/black/full
 	icon_state = "corner_white_full"
 
+/obj/effect/floor_decal/corner/black/all
+	icon_state = "corner_white_all"
+
 /obj/effect/floor_decal/corner/blue
 	name = "blue corner"
 	color = COLOR_BLUE_GRAY
@@ -74,6 +77,9 @@
 
 /obj/effect/floor_decal/corner/blue/full
 	icon_state = "corner_white_full"
+
+/obj/effect/floor_decal/corner/blue/all
+	icon_state = "corner_white_all"
 
 /obj/effect/floor_decal/corner/paleblue
 	name = "pale blue corner"
@@ -85,6 +91,9 @@
 /obj/effect/floor_decal/corner/paleblue/full
 	icon_state = "corner_white_full"
 
+/obj/effect/floor_decal/corner/paleblue/all
+	icon_state = "corner_white_all"
+
 /obj/effect/floor_decal/corner/green
 	name = "green corner"
 	color = COLOR_GREEN_GRAY
@@ -94,6 +103,9 @@
 
 /obj/effect/floor_decal/corner/green/full
 	icon_state = "corner_white_full"
+
+/obj/effect/floor_decal/corner/green/all
+	icon_state = "corner_white_all"
 
 /obj/effect/floor_decal/corner/lime
 	name = "lime corner"
@@ -105,6 +117,9 @@
 /obj/effect/floor_decal/corner/lime/full
 	icon_state = "corner_white_full"
 
+/obj/effect/floor_decal/corner/lime/all
+	icon_state = "corner_white_all"
+
 /obj/effect/floor_decal/corner/yellow
 	name = "yellow corner"
 	color = COLOR_BROWN
@@ -114,6 +129,9 @@
 
 /obj/effect/floor_decal/corner/yellow/full
 	icon_state = "corner_white_full"
+
+/obj/effect/floor_decal/corner/yellow/all
+	icon_state = "corner_white_all"
 
 /obj/effect/floor_decal/corner/beige
 	name = "beige corner"
@@ -125,6 +143,9 @@
 /obj/effect/floor_decal/corner/beige/full
 	icon_state = "corner_white_full"
 
+/obj/effect/floor_decal/corner/beige/all
+	icon_state = "corner_white_all"
+
 /obj/effect/floor_decal/corner/red
 	name = "red corner"
 	color = COLOR_RED_GRAY
@@ -134,6 +155,9 @@
 
 /obj/effect/floor_decal/corner/red/full
 	icon_state = "corner_white_full"
+
+/obj/effect/floor_decal/corner/red/all
+	icon_state = "corner_white_all"
 
 /obj/effect/floor_decal/corner/pink
 	name = "pink corner"
@@ -145,6 +169,9 @@
 /obj/effect/floor_decal/corner/pink/full
 	icon_state = "corner_white_full"
 
+/obj/effect/floor_decal/corner/pink/all
+	icon_state = "corner_white_all"
+
 /obj/effect/floor_decal/corner/purple
 	name = "purple corner"
 	color = COLOR_PURPLE_GRAY
@@ -154,6 +181,9 @@
 
 /obj/effect/floor_decal/corner/purple/full
 	icon_state = "corner_white_full"
+
+/obj/effect/floor_decal/corner/purple/all
+	icon_state = "corner_white_all"
 
 /obj/effect/floor_decal/corner/mauve
 	name = "mauve corner"
@@ -165,6 +195,9 @@
 /obj/effect/floor_decal/corner/mauve/full
 	icon_state = "corner_white_full"
 
+/obj/effect/floor_decal/corner/mauve/all
+	icon_state = "corner_white_all"
+
 /obj/effect/floor_decal/corner/orange
 	name = "orange corner"
 	color = COLOR_DARK_ORANGE
@@ -174,6 +207,9 @@
 
 /obj/effect/floor_decal/corner/orange/full
 	icon_state = "corner_white_full"
+
+/obj/effect/floor_decal/corner/orange/all
+	icon_state = "corner_white_all"
 
 /obj/effect/floor_decal/corner/brown
 	name = "brown corner"
@@ -185,6 +221,9 @@
 /obj/effect/floor_decal/corner/brown/full
 	icon_state = "corner_white_full"
 
+/obj/effect/floor_decal/corner/brown/all
+	icon_state = "corner_white_all"
+
 /obj/effect/floor_decal/corner/white
 	name = "white corner"
 	icon_state = "corner_white"
@@ -194,6 +233,9 @@
 
 /obj/effect/floor_decal/corner/white/full
 	icon_state = "corner_white_full"
+
+/obj/effect/floor_decal/corner/white/all
+	icon_state = "corner_white_all"
 
 /obj/effect/floor_decal/corner/grey
 	name = "grey corner"
