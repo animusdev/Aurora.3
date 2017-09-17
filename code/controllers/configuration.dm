@@ -183,11 +183,11 @@ var/list/gamemode_cache = list()
 	var/python_path = "python" //Path to the python executable.  Defaults to "python" on windows and "/usr/bin/env python2" on unix
 	var/use_overmap = 0
 
-	var/list/station_levels = list(3, 4, 5, 6, 7)				// Defines which Z-levels the station exists on.
-	var/list/admin_levels= list(1)					// Defines which Z-levels which are for admin functionality, for example including such areas as Central Command and the Syndicate Shuttle
-	var/list/contact_levels = list(3, 4, 5, 6)			// Defines which Z-levels which, for example, a Code Red announcement may affect
-	var/list/player_levels = list(2, 3, 4, 5, 6, 7, 8)	// Defines all Z-levels a character can typically reach
-	var/list/sealed_levels = list() 				// Defines levels that do not allow random transit at the edges.
+	var/list/station_levels = list(1, 2)				// Defines which Z-levels the station exists on.
+	var/list/admin_levels= list(7)					// Defines which Z-levels which are for admin functionality, for example including such areas as Central Command and the Syndicate Shuttle
+	var/list/contact_levels = list(1, 2, 3, 4)			// Defines which Z-levels which, for example, a Code Red announcement may affect
+	var/list/player_levels = list(1, 2, 3, 4, 5 ,6)	// Defines all Z-levels a character can typically reach
+	var/list/sealed_levels = list(7) 				// Defines levels that do not allow random transit at the edges.
 
 	// Event settings
 	var/expected_round_length = 3 * 60 * 60 * 10 // 3 hours
