@@ -2202,11 +2202,5 @@
 #include "code\ZAS\Zone.dm"
 #include "interface\interface.dm"
 #include "interface\skin.dmf"
-#include "maps\exodus\exodus-1.dmm"
-#include "maps\exodus\exodus-2.dmm"
-#include "maps\exodus\exodus-3.dmm"
-#include "maps\exodus\exodus-4.dmm"
-#include "maps\exodus\exodus-5.dmm"
-#include "maps\exodus\exodus-6.dmm"
-#include "maps\exodus\exodus-7.dmm"
+#include "maps\exodus\exodus.dm"
 // END_INCLUDE
