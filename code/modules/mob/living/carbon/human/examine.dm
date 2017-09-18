@@ -44,7 +44,7 @@
 	msg += "!\n"
 
 	if (species && species.has_organ["ipc tag"] && internal_organs_by_name["ipc tag"])
-		msg += "[T.He] [T.is] wearing a tag designating them as Integrated Positronic Chassis <b>[src.real_name]</b>.\n"
+		msg += "[T.He] [T.is] wearing a tag designating them as Android <b>[src.real_name]</b>.\n"
 
 	//uniform
 	if(w_uniform && !skipjumpsuit)
@@ -217,7 +217,7 @@
 		msg += "<span class='danger'>[T.He] [T.is] on fire!</span>\n"
 	msg += "<span class='warning'>"
 
-	
+
 	if(nutrition < 100)
 		msg += "[T.He] [T.is] severely malnourished.\n"
 	else if(nutrition >= 500)
@@ -225,7 +225,7 @@
 			msg += "[T.He] [T.is] plump and delicious looking - Like a fat little piggy. A tasty piggy.\n"
 		else*/
 		msg += "[T.He] [T.is] quite chubby.\n"
-	
+
 
 	msg += "</span>"
 

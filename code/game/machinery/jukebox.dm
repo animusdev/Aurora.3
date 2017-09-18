@@ -11,9 +11,9 @@ datum/track/New(var/title_name, var/audio)
 /obj/machinery/media/jukebox/
 	name = "space jukebox"
 	icon = 'icons/obj/jukebox.dmi'
-	icon_state = "jukebox2-nopower"
+	icon_state = "jukebox2"
 	var/state_base = "jukebox2"
-	anchored = 0
+	anchored = 1
 	density = 1
 	power_channel = EQUIP
 	use_power = 1
@@ -24,18 +24,14 @@ datum/track/New(var/title_name, var/audio)
 
 	var/datum/track/current_track
 	var/list/datum/track/tracks = list(
-		new/datum/track("Beyond", 'sound/ambience/ambispace.ogg'),
-		new/datum/track("Clouds of Fire", 'sound/music/clouds.s3m'),
-		new/datum/track("D`Bert", 'sound/music/title2.ogg'),
 		new/datum/track("D`Fort", 'sound/ambience/song_game.ogg'),
-		new/datum/track("Floating", 'sound/music/main.ogg'),
 		new/datum/track("Endless Space", 'sound/music/space.ogg'),
-		new/datum/track("Part A", 'sound/misc/TestLoop1.ogg'),
-		new/datum/track("Scratch", 'sound/music/title1.ogg'),
-		new/datum/track("Trai`Tor", 'sound/music/traitor.ogg'),
-		new/datum/track("Thunderdome", 'sound/music/THUNDERDOME.ogg'),
 		new/datum/track("Space Oddity", 'sound/music/space_oddity.ogg'),
-		new/datum/track("Space Asshole", 'sound/music/space_asshole.ogg')
+		new/datum/track("Magic Fly", 'sound/music/SPACE_Magic_Fly.ogg'),
+		new/datum/track("Tristram Theme", 'sound/music/Tristram_Diablo_1_town_theme.ogg'),
+		new/datum/track("Milky Way", 'sound/music/MilkyWay_Battle.ogg'),
+		new/datum/track("Wizard's Assistant", 'sound/music/Wizards_assistant.ogg'),
+		new/datum/track("Radio 'Bandit'", 'sound/music/Bandit_radio.ogg')
 	)
 
 

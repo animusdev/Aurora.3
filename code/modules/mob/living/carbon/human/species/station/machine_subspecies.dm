@@ -1,15 +1,16 @@
 /datum/species/machine/shell
-	name = "Shell Frame"
+	name = "Android"
 	hide_name = TRUE
-	short_name = "jak"
-	name_plural = "Shells"
+	short_name = "ads"
+	name_plural = "Androids"
 	bodytype = "Human"
 
-	burn_mod = 1.2
+	brute_mod = 0.8
+	burn_mod = 1
 
 	blurb = "IPC's with humanlike properties. Their focus is on service, civilian, and medical, but there are no \
-	job restrictions. Created in the late days of 2457, the Shell is a controversial IPC model equipped with a synthskin weave applied over its metal chassis \
-	to create an uncannily close approximation of the organic form. Early models of Shell had the advantage of being able to compose themselves of a wide \
+	job restrictions. Created in the late days of 2457, the Android is a controversial IPC model equipped with a synthskin weave applied over its metal chassis \
+	to create an uncannily close approximation of the organic form. Early models of Android had the advantage of being able to compose themselves of a wide \
 	 variety of organic parts, but contemporary models have been restricted to a single species for the sake of prosthetic integrity. The additional weight of \
 	 the synthskin on the original Hephaestus frame reduces the efficacy of the IPC's already strained coolant systems, and increase charge consumption."
 
@@ -26,9 +27,9 @@
 
 	max_nutrition_factor = 0.8
 
-	heat_level_1 = 400
+/*	heat_level_1 = 400
 	heat_level_2 = 800
-	heat_level_3 = 1600
+	heat_level_3 = 1600*/
 
 	heat_discomfort_level = 400
 	heat_discomfort_strings = list(
@@ -65,7 +66,7 @@
 	. = ..()
 	check_tag(H, H.client)
 
-/datum/species/machine/shell/handle_sprint_cost(var/mob/living/carbon/human/H, var/cost)
+/*datum/species/machine/shell/handle_sprint_cost(var/mob/living/carbon/human/H, var/cost)
 	if (H.stat == CONSCIOUS)
 		H.bodytemperature += cost*1.3
 		H.nutrition -= cost*0.85
@@ -77,7 +78,7 @@
 			H.hud_used.move_intent.update_move_icon(H)
 			H << span("danger", "ERROR: Power reserves depleted, emergency shutdown engaged. Backup power will come online in 60 seconds, initiate charging as primary directive.")
 			playsound(H.loc, 'sound/machines/buzz-two.ogg', 100, 0)
-	return 0
+	return 0*/
 
 /datum/species/machine/shell/handle_death(var/mob/living/carbon/human/H)
 	return
@@ -95,7 +96,7 @@
 	bald = 1
 
 	brute_mod = 0.8
-	burn_mod = 1.3
+	burn_mod = 1
 	slowdown = 4
 
 	blurb = "Tough units made for engineering and security with simple exteriors, roughly resembling humans. No job restrictions. Heavy emphasis on \
@@ -126,9 +127,9 @@
 
 	appearance_flags = HAS_EYE_COLOR
 
-	heat_level_1 = 600
+/*	heat_level_1 = 600
 	heat_level_2 = 1200
-	heat_level_3 = 2400
+	heat_level_3 = 2400*/
 
 	heat_discomfort_level = 800
 
@@ -140,7 +141,7 @@
 /datum/species/machine/industrial/get_light_color(hair_style)
 	return LIGHT_COLOR_TUNGSTEN
 
-/datum/species/machine/industrial/handle_sprint_cost(var/mob/living/carbon/human/H, var/cost)
+/*datum/species/machine/industrial/handle_sprint_cost(var/mob/living/carbon/human/H, var/cost)
 	if (H.stat == CONSCIOUS)
 		H.bodytemperature += cost*0.9
 		H.nutrition -= cost*1.1
@@ -152,7 +153,7 @@
 			H.hud_used.move_intent.update_move_icon(H)
 			H << span("danger", "ERROR: Power reserves depleted, emergency shutdown engaged. Backup power will come online in two minutes, initiate charging as primary directive.")
 			playsound(H.loc, 'sound/machines/buzz-two.ogg', 100, 0)
-	return 0
+	return 0*/
 
 /datum/species/machine/industrial/handle_death(var/mob/living/carbon/human/H)
 	return
@@ -247,7 +248,7 @@
 /datum/species/machine/terminator/get_light_color(hair_style)
 	return
 
-/datum/species/machine/terminator/handle_sprint_cost(var/mob/living/carbon/human/H, var/cost)
+/*datum/species/machine/terminator/handle_sprint_cost(var/mob/living/carbon/human/H, var/cost)
 	if (H.stat == CONSCIOUS)
 		H.bodytemperature += cost*0.6
 		H.nutrition -= cost*0.3
@@ -259,7 +260,7 @@
 			H.hud_used.move_intent.update_move_icon(H)
 			H << span("danger", "ERROR: Power reserves depleted, emergency shutdown engaged. Backup power will come online in 10 seconds, initiate charging as primary directive.")
 			playsound(H.loc, 'sound/machines/buzz-two.ogg', 100, 0)
-	return 0
+	return 0*/
 
 /datum/species/machine/terminator/handle_death(var/mob/living/carbon/human/H)
 	..()
