@@ -471,7 +471,7 @@
 		"Your CPU temperature probes warn you that you are approaching critical heat levels!"
 		)
 	stamina = -1	// Machines use power and generate heat, stamina is not a thing
-	sprint_speed_factor = 1.5  // About as capable of speed as a human
+	sprint_speed_factor = 0.9  // About as capable of speed as a human
 
 datum/species/machine/handle_post_spawn(var/mob/living/carbon/human/H)
 	H.gender = NEUTER
