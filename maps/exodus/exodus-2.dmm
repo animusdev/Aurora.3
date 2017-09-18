@@ -2812,7 +2812,7 @@
 "bcd" = (/obj/structure/disposalpipe/segment,/obj/effect/floor_decal/corner/blue{tag = "icon-corner_white (WEST)"; icon_state = "corner_white"; dir = 8},/turf/simulated/floor/tiled,/area/hallway/primary/central_two)
 "bce" = (/obj/structure/cable{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor/tiled,/area/hallway/primary/central_two)
 "bcf" = (/obj/effect/wingrille_spawn/reinforced/polarized{id = "bar_private"},/obj/machinery/door/firedoor{dir = 2},/turf/simulated/floor/plating,/area/hallway/primary/central_two)
-"bcg" = (/obj/structure/bed/chair/comfy/red,/obj/effect/floor_decal/corner/black/diagonal,/turf/simulated/floor/tiled/dark,/area/crew_quarters/bar)
+"bcg" = (/obj/structure/bed/chair/comfy/red,/obj/effect/floor_decal/corner/black/diagonal,/obj/item/modular_computer/telescreen/preset/generic{pixel_y = 28},/turf/simulated/floor/tiled/dark,/area/crew_quarters/bar)
 "bch" = (/obj/machinery/button/windowtint{id = "bar_private"; pixel_y = 26},/turf/simulated/floor/tiled/dark,/area/crew_quarters/bar)
 "bci" = (/obj/effect/floor_decal/corner/black/diagonal,/turf/simulated/floor/tiled/dark,/area/crew_quarters/bar)
 "bcj" = (/obj/effect/wingrille_spawn/reinforced/polarized{id = "bar_private"},/obj/machinery/door/firedoor{dir = 2},/turf/simulated/floor/plating,/area/crew_quarters/bar)
