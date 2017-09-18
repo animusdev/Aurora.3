@@ -4,7 +4,6 @@
 	voice_name = "unknown"
 	icon = 'icons/mob/human.dmi'
 	icon_state = "body_m_s"
-
 	var/list/hud_list[10]
 	var/embedded_flag	  //To check if we've need to roll for damage on movement while an item is imbedded in us.
 	var/obj/item/weapon/rig/wearing_rig // This is very not good, but it's much much better than calling get_rig() every update_canmove() call.
@@ -26,6 +25,11 @@
 		name = real_name
 		if(mind)
 			mind.name = real_name
+
+	if(gender == "Female")
+		icon_state = "body_f_s"
+	else
+		icon_state = "body_m_s"
 
 	hud_list[HEALTH_HUD]      = image('icons/mob/hud.dmi', src, "hudhealth100")
 	hud_list[STATUS_HUD]      = image('icons/mob/hud.dmi', src, "hudhealthy")
@@ -916,8 +920,10 @@
 	if (new_gender)
 		if(new_gender == "Male")
 			gender = MALE
+			icon_state = "body_m_s"
 		else
 			gender = FEMALE
+			icon_state = "body_f_s"
 	regenerate_icons()
 	check_dna()
 
