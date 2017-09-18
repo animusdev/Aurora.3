@@ -208,6 +208,36 @@
 	lift_floor_name = "Under Construction"
 
 
+//Brig Exodus
+/obj/turbolift_map_holder/exodus/brig
+	name = "Exodus lift placeholder - Brig"
+	dir = EAST
+
+	lift_size_x = 5
+	lift_size_y = 5
+	depth = 2
+
+	areas_to_use = list(
+		/area/turbolift/brig_station,
+		/area/turbolift/brig_subway
+		)
+
+/area/turbolift/brig_station
+	name = "Brig Lift - Main"
+	lift_announce_str = "Arriving at the station level, by the Security department."
+
+	lift_floor_label = "Main Level (Brig)"
+	lift_floor_name = "Main Level (Brig)"
+
+/area/turbolift/brig_subway
+	name = "Brig Lift - Sub"
+	lift_announce_str = "Arriving at the maintenance level, below the Security department."
+
+	lift_floor_label = "Sub-Level (Brig)"
+	lift_floor_name = "Sub-Level (Brig)"
+
+	base_turf = /turf/simulated/floor/plating
+
 //Medical
 /obj/turbolift_map_holder/aurora/medical
 	name = "Aurora lift placeholder - Medical"
