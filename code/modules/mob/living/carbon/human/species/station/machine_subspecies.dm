@@ -66,19 +66,16 @@
 	. = ..()
 	check_tag(H, H.client)
 
-/*datum/species/machine/shell/handle_sprint_cost(var/mob/living/carbon/human/H, var/cost)
+/datum/species/machine/shell/handle_sprint_cost(var/mob/living/carbon/human/H, var/cost)
 	if (H.stat == CONSCIOUS)
-		H.bodytemperature += cost*1.3
-		H.nutrition -= cost*0.85
 		if (H.nutrition > 0)
 			return 1
 		else
-			H.Weaken(30)
 			H.m_intent = "walk"
 			H.hud_used.move_intent.update_move_icon(H)
 			H << span("danger", "ERROR: Power reserves depleted, emergency shutdown engaged. Backup power will come online in 60 seconds, initiate charging as primary directive.")
 			playsound(H.loc, 'sound/machines/buzz-two.ogg', 100, 0)
-	return 0*/
+	return 0
 
 /datum/species/machine/shell/handle_death(var/mob/living/carbon/human/H)
 	return
@@ -248,10 +245,8 @@
 /datum/species/machine/terminator/get_light_color(hair_style)
 	return
 
-/*datum/species/machine/terminator/handle_sprint_cost(var/mob/living/carbon/human/H, var/cost)
+/datum/species/machine/terminator/handle_sprint_cost(var/mob/living/carbon/human/H, var/cost)
 	if (H.stat == CONSCIOUS)
-		H.bodytemperature += cost*0.6
-		H.nutrition -= cost*0.3
 		if (H.nutrition > 0)
 			return 1
 		else
@@ -260,7 +255,7 @@
 			H.hud_used.move_intent.update_move_icon(H)
 			H << span("danger", "ERROR: Power reserves depleted, emergency shutdown engaged. Backup power will come online in 10 seconds, initiate charging as primary directive.")
 			playsound(H.loc, 'sound/machines/buzz-two.ogg', 100, 0)
-	return 0*/
+	return 0
 
 /datum/species/machine/terminator/handle_death(var/mob/living/carbon/human/H)
 	..()

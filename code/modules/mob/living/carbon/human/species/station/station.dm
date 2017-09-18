@@ -478,19 +478,19 @@ datum/species/machine/handle_post_spawn(var/mob/living/carbon/human/H)
 	. = ..()
 	check_tag(H, H.client)
 
-/*datum/species/machine/handle_sprint_cost(var/mob/living/carbon/human/H, var/cost)
+/datum/species/machine/handle_sprint_cost(var/mob/living/carbon/human/H, var/cost)
 	if (H.stat == CONSCIOUS)
-		H.bodytemperature += cost*1.15
-		H.nutrition -= cost*0.65
+		//H.bodytemperature += cost*1.15
+		//H.nutrition -= cost*0.65
 		if (H.nutrition > 0)
 			return 1
 		else
-			H.Weaken(30)
+			//H.Weaken(30)
 			H.m_intent = "walk"
 			H.hud_used.move_intent.update_move_icon(H)
 			H << span("danger", "ERROR: Power reserves depleted, emergency shutdown engaged. Backup power will come online in 60 seconds, initiate charging as primary directive.")
 			playsound(H.loc, 'sound/machines/buzz-two.ogg', 100, 0)
-	return 0*/
+	return 0
 
 /datum/species/machine/handle_death(var/mob/living/carbon/human/H)
 	..()
