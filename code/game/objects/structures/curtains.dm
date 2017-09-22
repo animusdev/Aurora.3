@@ -1,17 +1,17 @@
-#define SHOWER_OPEN_LAYER OBJ_LAYER + 0.4
-#define SHOWER_CLOSED_LAYER MOB_LAYER + 0.1
+#define CURTAIN_OPEN_LAYER OBJ_LAYER + 0.4
+#define CURTAIN_CLOSED_LAYER MOB_LAYER + 0.1
 
 /obj/structure/curtain
 	name = "curtain"
 	icon = 'icons/obj/curtain.dmi'
-	icon_state = "closed"
-	layer = SHOWER_OPEN_LAYER
+	icon_state = "curtain_closed"
+	layer = CURTAIN_OPEN_LAYER
 	opacity = 1
 	density = 0
 
 /obj/structure/curtain/open
-	icon_state = "open"
-	layer = SHOWER_CLOSED_LAYER
+	icon_state = "curtain_open"
+	layer = CURTAIN_CLOSED_LAYER
 	opacity = 0
 
 /obj/structure/curtain/bullet_act(obj/item/projectile/P, def_zone)
@@ -21,23 +21,47 @@
 	else
 		..(P, def_zone)
 
-/obj/structure/curtain/attack_hand(mob/user)
-	playsound(get_turf(loc), "rustle", 15, 1, -5)
-	toggle()
-	..()
-
-/obj/structure/curtain/proc/toggle()
-	src.set_opacity(!src.opacity)
+/obj/structure/curtain/attack_hand(mob/user as mob)
+	opacity = !opacity
 	if(opacity)
-		icon_state = "closed"
-		layer = SHOWER_CLOSED_LAYER
+		flick("curtain_closing", src)
+		icon_state = "curtain_closed"
+		layer = CURTAIN_CLOSED_LAYER
+		sleep(10)
 	else
-		icon_state = "open"
-		layer = SHOWER_OPEN_LAYER
+		flick("curtain_opening", src)
+		icon_state = "curtain_open"
+		layer = CURTAIN_OPEN_LAYER
+		sleep(10)
+	return
 
 /obj/structure/curtain/black
 	name = "black curtain"
-	color = "#222222"
+	color = "#282828"
+
+/obj/structure/curtain/yellow
+	name = "yellow curtain"
+	color = "#E8CC3A"
+
+/obj/structure/curtain/red
+	name = "red curtain"
+	color = "#930200"
+
+/obj/structure/curtain/blue
+	name = "blue curtain"
+	color = "#282E70"
+
+/obj/structure/curtain/indigo
+	name = "indigo curtain"
+	color = "#BF118D"
+
+/obj/structure/curtain/green
+	name = "green curtain"
+	color = "#397C3A"
+
+/obj/structure/curtain/cyan
+	name = "cyan curtain"
+	color = "#189692"
 
 /obj/structure/curtain/medical
 	name = "plastic curtain"
@@ -50,7 +74,7 @@
 	alpha = 200
 
 /obj/structure/curtain/open/bed
-	name = "bed curtain"
+	name = "brown curtain"
 	color = "#854636"
 
 /obj/structure/curtain/open/privacy
@@ -68,5 +92,9 @@
 /obj/structure/curtain/open/shower/security
 	color = "#AA0000"
 
-#undef SHOWER_OPEN_LAYER
-#undef SHOWER_CLOSED_LAYER
+/obj/structure/curtain/temperature_expose(datum/gas_mixture/air, exposed_temperature, exposed_volume)
+	if(exposed_temperature > T0C + 1500)
+		del(src)
+
+#undef CURTAIN_OPEN_LAYER
+#undef CURTAIN_CLOSED_LAYER
