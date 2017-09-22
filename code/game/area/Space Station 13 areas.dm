@@ -276,6 +276,16 @@ area/space/atmosalert()
 	name = "\improper Alien Shuttle Mine"
 	requires_power = 1
 
+/area/shuttle/security
+	name = "\improper Prison Shuttle"
+
+/area/shuttle/security/station
+	icon_state = "shuttlered"
+	station_area = 1
+
+/area/shuttle/security/prison
+	icon_state = "shuttlered2"
+
 // CENTCOM
 
 /area/prison/solitary
@@ -741,6 +751,10 @@ area/space/atmosalert()
 
 /area/maintenance/storage
 	name = "Atmospherics"
+	icon_state = "green"
+
+/area/maintenance/prison
+	name = "Prison Maintenance"
 	icon_state = "green"
 
 // SUBSTATIONS (Subtype of maint, that should let them serve as shielded area during radstorm)
@@ -1548,28 +1562,44 @@ area/space/atmosalert()
 	icon_state = "sec_prison"
 
 /area/security/prison
-	name = "\improper Security - Prison Wing"
+	name = "\improper Security - Prison Outpost"
 	icon_state = "sec_prison"
 
 /area/security/prison/restroom
-	name = "\improper Security - Prison Wing Restroom"
-	icon_state = "sec_prison"
+	name = "\improper Security - Prison Outpost Restroom"
+	icon_state = "restrooms"
 
 /area/security/prison/main
-	name = "\improper Security - Prison Wing Main Chamber"
+	name = "\improper Security - Prison Outpost Main Chamber"
 	icon_state = "sec_prison"
 
 /area/security/prison/dorm
-	name = "\improper Security - Prison Wing Dormitory"
+	name = "\improper Security - Prison Outpost Dormitory"
 	icon_state = "sec_prison"
 
 /area/security/prison/hallway
-	name = "\improper Security - Prison Wing Hallway"
+	name = "\improper Security - Prison Outpost Hallway"
 	icon_state = "sec_prison"
 
 /area/security/prison/punishment
-	name = "\improper Security - Prison Wing Chastisement"
-	icon_state = "sec_prison"
+	name = "\improper Security - Prison Outpost Chastisement"
+	icon_state = "red2"
+
+/area/security/prison/breakroom
+	name = "\improper Security - Prison Staff Room"
+	icon_state = "party"
+
+/area/security/prison/secdorms
+	name = "\improper Security - Prison Staff Dorms"
+	icon_state = "crew_quarters"
+
+/area/security/prison/mine
+	name = "\improper Security - Prison Mine"
+	icon_state = "yellow"
+
+/area/security/prison/depot
+	name = "\improper Security - Prison Depot"
+	icon_state = "storage"
 
 /area/security/prison/prison_break()
 	for(var/obj/structure/closet/secure_closet/brig/temp_closet in src)
