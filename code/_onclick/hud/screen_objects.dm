@@ -212,10 +212,13 @@
 					C.hud_used.move_intent.icon_state = "walking"
 					return 1
 				switch(usr.m_intent)
-					if("run")
-						usr.m_intent = "walk"
 					if("walk")
 						usr.m_intent = "run"
+					if("run")
+						usr.m_intent = "sprint"
+					if("sprint")
+						usr.m_intent = "walk"
+					
 			update_move_icon(usr)
 		if("m_intent")
 			if(!usr.m_int)
@@ -570,8 +573,8 @@
 		if("mov_intent")
 			overlays.Cut()
 			switch(user.m_intent)
-				if("run")//When in run mode, the button will have a flashing coloured overlay which gives a visual indicator of stamina
-					icon_state = "running"
+				if("sprint")//When in sprint mode, the button will have a flashing coloured overlay which gives a visual indicator of stamina
+					icon_state = "sprinting"
 					if (user.max_stamina != -1)//If max stamina is -1, this species doesnt use stamina. no overlay for them
 						var/image/holder = image('icons/mob/screen1.dmi', src, "run_overlay")
 						var/staminaportion = user.stamina / user.max_stamina
@@ -579,5 +582,7 @@
 						holder.blend_mode = BLEND_MULTIPLY
 						overlays += holder
 
+				if("run")
+					icon_state = "running"
 				if("walk")
 					icon_state = "walking"
