@@ -145,7 +145,7 @@ var/list/gamemode_cache = list()
 	var/walk_speed = 3.5
 	var/walk_delay_multiplier = 1
 	var/run_delay_multiplier = 1
-	var/sprint_delay_multiprier = 1
+	var/sprint_delay_multiplier = 1
 	var/vehicle_delay_multiplier = 1
 
 	//Mob specific modifiers. NOTE: These will affect different mob types in different ways
