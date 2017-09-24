@@ -50,7 +50,10 @@ var/datum/controller/subsystem/ticker/SSticker
 		'sound/music/traitor.ogg',
 		'sound/music/title2.ogg',
 		'sound/music/clouds.s3m',
-		'sound/music/space_oddity.ogg'
+		'sound/music/b12_combined_start.ogg',
+		'sound/music/SPACE_Magic_Fly.ogg',
+		'sound/music/Tristram_Diablo_1_town_theme.ogg',
+		'sound/music/title1.ogg'
 	)
 
 	var/lobby_ready = FALSE
@@ -206,6 +209,7 @@ var/datum/controller/subsystem/ticker/SSticker
 
 	world << "<br><br><br><H1>A round of [mode.name] has ended!</H1>"
 	for(var/mob/Player in player_list)
+		Player << sound('sound/music/space_asshole.ogg', repeat = 0, wait = 0, volume = 85, channel = 777)
 		if(Player.mind && !isnewplayer(Player))
 			if(Player.stat != DEAD)
 				var/turf/playerTurf = get_turf(Player)
@@ -462,7 +466,7 @@ var/datum/controller/subsystem/ticker/SSticker
 			var/turf/Mloc = M.loc
 			if (!Mloc)
 				continue
-			
+
 			if (!istype(Mloc))
 				Mloc = get_turf(M)
 

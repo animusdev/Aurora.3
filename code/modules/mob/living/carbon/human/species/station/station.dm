@@ -385,7 +385,7 @@
 	bodytype = "Machine"
 	age_min = 1
 	age_max = 30
-	economic_modifier = 3
+	economic_modifier = 5
 
 	blurb = "IPCs are, quite simply, 'Integrated Positronic Chassis'. In this scenario, positronic does not mean anything significant - it is a nickname given \
 	to all advanced processing units, based on the works of vintage writer Isaac Asimov. The long of the short is that they represent all unbound synthetic \
@@ -411,7 +411,7 @@
 	remains_type = /obj/effect/decal/remains/robot
 
 
-	brute_mod = 1.0
+	brute_mod = 0.7
 	burn_mod = 1.0
 	show_ssd = "flashing a 'system offline' glyph on their monitor"
 	death_message = "gives one shrill beep before falling lifeless."
@@ -426,12 +426,12 @@
 	cold_level_2 = -1
 	cold_level_3 = -1
 
-	heat_level_1 = 500		// Gives them about 25 seconds in space before taking damage
-	heat_level_2 = 1000
-	heat_level_3 = 2000
+	heat_level_1 = 1000		// Gives them about 25 seconds in space before taking damage
+	heat_level_2 = 2000
+	heat_level_3 = 3000
 
 	body_temperature = null
-	passive_temp_gain = 10  // This should cause IPCs to stabilize at ~80 C in a 20 C environment.
+	passive_temp_gain = 2  // This should cause IPCs to stabilize at ~80 C in a 20 C environment.
 
 	flags = NO_BREATHE | NO_SCAN | NO_BLOOD | NO_PAIN | NO_POISON | NO_MINOR_CUT
 	appearance_flags = HAS_SKIN_COLOR | HAS_HAIR_COLOR
@@ -466,12 +466,12 @@
 	)
 
 
-	heat_discomfort_level = 373.15
+	heat_discomfort_level = 500.15
 	heat_discomfort_strings = list(
 		"Your CPU temperature probes warn you that you are approaching critical heat levels!"
 		)
 	stamina = -1	// Machines use power and generate heat, stamina is not a thing
-	sprint_speed_factor = 1  // About as capable of speed as a human
+	sprint_speed_factor = 0.9  // About as capable of speed as a human
 
 datum/species/machine/handle_post_spawn(var/mob/living/carbon/human/H)
 	H.gender = NEUTER
@@ -480,12 +480,12 @@ datum/species/machine/handle_post_spawn(var/mob/living/carbon/human/H)
 
 /datum/species/machine/handle_sprint_cost(var/mob/living/carbon/human/H, var/cost)
 	if (H.stat == CONSCIOUS)
-		H.bodytemperature += cost*1.15
-		H.nutrition -= cost*0.65
+		//H.bodytemperature += cost*1.15
+		//H.nutrition -= cost*0.65
 		if (H.nutrition > 0)
 			return 1
 		else
-			H.Weaken(30)
+			//H.Weaken(30)
 			H.m_intent = "walk"
 			H.hud_used.move_intent.update_move_icon(H)
 			H << span("danger", "ERROR: Power reserves depleted, emergency shutdown engaged. Backup power will come online in 60 seconds, initiate charging as primary directive.")

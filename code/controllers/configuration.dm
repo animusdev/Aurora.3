@@ -1,24 +1,24 @@
 var/list/gamemode_cache = list()
 
 /datum/configuration
-	var/server_name = null				// server name (for world name / status)
+	var/server_name = "Blue Shift"				// server name (for world name / status)
 	var/server_suffix = 0				// generate numeric suffix based on server port
 
 	var/list/lobby_screens = list("title") // Which lobby screens are available
 
-	var/log_ooc = 0						// log OOC channel
-	var/log_access = 0					// log login/logout
-	var/log_say = 0						// log client say
-	var/log_admin = 0					// log admin actions
+	var/log_ooc = 1						// log OOC channel
+	var/log_access = 1					// log login/logout
+	var/log_say = 1						// log client say
+	var/log_admin = 1					// log admin actions
 	var/log_debug = 1					// log debug output
-	var/log_game = 0					// log game events
-	var/log_vote = 0					// log voting
-	var/log_whisper = 0					// log client whisper
-	var/log_emote = 0					// log emotes
-	var/log_attack = 0					// log attack messages
+	var/log_game = 1					// log game events
+	var/log_vote = 1					// log voting
+	var/log_whisper = 1					// log client whisper
+	var/log_emote = 1					// log emotes
+	var/log_attack = 1					// log attack messages
 	var/log_adminchat = 0				// log admin chat messages
-	var/log_pda = 0						// log pda messages
-	var/log_hrefs = 0					// logs all links clicked in-game. Could be used for debugging and tracking down exploits
+	var/log_pda = 1						// log pda messages
+	var/log_hrefs = 1					// logs all links clicked in-game. Could be used for debugging and tracking down exploits
 	var/log_runtime = 0					// logs world.log to a file
 	var/log_world_output = 0			// log world.log << messages
 	var/sql_enabled = 1					// for sql switching
@@ -42,7 +42,7 @@ var/list/gamemode_cache = list()
 	var/feature_object_spell_system = 0 //spawns a spellbook which gives object-type spells instead of verb-type spells for the wizard
 	var/traitor_scaling = 0 			//if amount of traitors scales based on amount of players
 	var/objectives_disabled = 0 			//if objectives are disabled or not
-	var/protect_roles_from_antagonist = 0// If security and such can be traitor/cult/other
+	var/protect_roles_from_antagonist = 1// If security and such can be traitor/cult/other
 	var/continous_rounds = 0			// Gamemodes which end instantly will instead keep on going until the round ends by escape shuttle or nuke.
 	var/allow_Metadata = 0				// Metadata is supported.
 	var/popup_admin_pm = 0				//adminPMs to non-admins show in a pop-up 'reply' window when set to 1.
@@ -142,7 +142,7 @@ var/list/gamemode_cache = list()
 
 	//Used for modifying movement speed for mobs.
 	//Unversal modifiers
-	var/walk_speed = 0
+	var/walk_speed = 3.5
 	var/walk_delay_multiplier = 1
 	var/run_delay_multiplier = 1
 	var/vehicle_delay_multiplier = 1
@@ -171,7 +171,7 @@ var/list/gamemode_cache = list()
 
 	var/assistant_maint = 0 //Do assistants get maint access?
 	var/gateway_delay = 18000 //How long the gateway takes before it activates. Default is half an hour.
-	var/ghost_interaction = 0
+	var/ghost_interaction = 1
 
 	var/night_lighting = 0
 	var/nl_start = 19
