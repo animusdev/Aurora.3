@@ -1,0 +1,10 @@
+//Easy lifehack
+#include "aurora-1_centcomm.dmm"
+#include "aurora-2_under-station.dmm"
+#include "aurora-3_sublevel.dmm"
+#include "aurora-4_mainlevel.dmm"
+#include "aurora-5_interstitial.dmm"
+#include "aurora-6_surface.dmm"
+#include "aurora-7_roof.dmm"
+#include "aurora-8_derelict.dmm"
+#include "aurora-9_space.dmm"
