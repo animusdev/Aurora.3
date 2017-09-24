@@ -198,7 +198,7 @@ var/datum/controller/subsystem/processing/shuttle/shuttle_controller
 	shuttle = new()
 	shuttle.warmup_time = 10
 	shuttle.area_offsite = locate(/area/shuttle/security/prison)
-	shuttle.area_station = locate(/area/shuttle/research/station)
+	shuttle.area_station = locate(/area/shuttle/security/station)
 	shuttle.docking_controller_tag = "security_shuttle"
 	shuttle.dock_target_station = "security_dock_airlock"
 	shuttle.dock_target_offsite = "security_outpost_dock"

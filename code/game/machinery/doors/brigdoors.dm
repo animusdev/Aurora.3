@@ -40,15 +40,15 @@
 /obj/machinery/door_timer/Initialize()
 	. = ..()
 
-	for(var/obj/machinery/door/window/brigdoor/M in SSmachinery.all_machines)
+	for(var/obj/machinery/door/window/brigdoor/M in world)
 		if (M.id == src.id)
 			targets += M
 
-	for(var/obj/machinery/flasher/F in SSmachinery.all_machines)
+	for(var/obj/machinery/flasher/F in world)
 		if(F.id == src.id)
 			targets += F
 
-	for(var/obj/structure/closet/secure_closet/brig/C in brig_closets)
+	for(var/obj/structure/closet/secure_closet/brig/C in world)
 		if(C.id == src.id)
 			targets += C
 

@@ -280,11 +280,11 @@ area/space/atmosalert()
 	name = "\improper Prison Shuttle"
 
 /area/shuttle/security/station
-	icon_state = "shuttlered"
+	icon_state = "shuttlered2"
 	station_area = 1
 
 /area/shuttle/security/prison
-	icon_state = "shuttlered2"
+	icon_state = "shuttlered"
 
 // CENTCOM
 
@@ -292,6 +292,7 @@ area/space/atmosalert()
 	name = "\improper CentComm Solitary Confinement"
 	icon_state = "brig"
 	centcomm_area = 1
+
 
 /area/centcom
 	name = "\improper Centcom"
