@@ -298,8 +298,10 @@
 		if (mob_is_human)
 			var/mob/living/carbon/human/H = mob
 			//If we're sprinting and able to continue sprinting, then apply the sprint bonus ontop of this
-			if (H.m_intent == "run" && H.species.handle_sprint_cost(H, tally)) //This will return false if we collapse from exhaustion
-				tally = (tally / (1 + H.sprint_speed_factor)) * config.run_delay_multiplier
+			if (H.m_intent == "sprint" && H.species.handle_sprint_cost(H, tally)) //This will return false if we collapse from exhaustion
+				tally = (tally / (1 + H.sprint_speed_factor)) * config.sprint_delay_multiplier
+			else if (H.m_intent == "run")
+				tally = tally * config.run_delay_multiplier
 			else
 				tally = max(tally * config.walk_delay_multiplier, H.min_walk_delay) //clamp walking speed if its limited
 		else

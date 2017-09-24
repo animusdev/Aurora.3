@@ -122,7 +122,7 @@
 			return
 		last_x = x
 		last_y = y
-		if (m_intent == "run")
+		if ((m_intent == "run") || (m_intent == "sprint"))
 			playsound(src, T.footstep_sound, 70, 1)
 		else
 			footstep++
