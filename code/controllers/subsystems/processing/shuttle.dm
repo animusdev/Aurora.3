@@ -224,10 +224,11 @@ var/datum/controller/subsystem/processing/shuttle/shuttle_controller
 	VS.origin = locate(/area/skipjack_station/start)
 
 	VS.destinations = list(
-		"Surface of the station" = locate(/area/skipjack_station/surface),
-		"Under the station" = locate(/area/skipjack_station/above),
-		"Above the station" = locate(/area/skipjack_station/under),
-		"Mining caverns" = locate(/area/skipjack_station/cavern)
+		"Fore port solars" = locate(/area/skipjack_station/northwest_solars),
+		"Fore starboard solars" = locate(/area/skipjack_station/northeast_solars),
+		"Aft port solars" = locate(/area/skipjack_station/southwest_solars),
+		"Aft starboard solars" = locate(/area/skipjack_station/southeast_solars),
+		"South of mining station" = locate(/area/skipjack_station/mining)
 	)
 
 	VS.announcer = "NDV Icarus"
@@ -244,11 +245,13 @@ var/datum/controller/subsystem/processing/shuttle/shuttle_controller
 	MS.start_location = "Mercenary Base"
 
 	MS.destinations = list(
-		"Surface of the station" = locate(/area/syndicate_station/surface),
-		"Above the station" = locate(/area/syndicate_station/above),
-		"Under the station" = locate(/area/syndicate_station/under),
-		"Mining caverns" = locate(/area/syndicate_station/caverns),
-		"Arrivals dock" = locate(/area/syndicate_station/arrivals_dock)
+		"North of SS13" = locate(/area/syndicate_station/north),
+		"South of SS13" = locate(/area/syndicate_station/south),
+		"Northwest of SS13" = locate(/area/syndicate_station/northwest),
+		"Northeast of SS13" = locate(/area/syndicate_station/northeast),
+		"Southwest of SS13" = locate(/area/syndicate_station/southwest),
+		"Southeast of SS13" = locate(/area/syndicate_station/southeast),
+		"Northeast of mining station" = locate(/area/syndicate_station/mining)
 	)
 
 	MS.docking_controller_tag = "merc_shuttle"
