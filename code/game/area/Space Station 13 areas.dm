@@ -99,7 +99,7 @@ area/space/atmosalert()
 
 /area/shuttle/arrival/station
 	icon_state = "shuttle"
-	base_turf = /turf/simulated/floor/asteroid
+	base_turf = /turf/space
 	station_area = 1
 
 /area/shuttle/escape
@@ -109,7 +109,7 @@ area/space/atmosalert()
 /area/shuttle/escape/station
 	name = "\improper Emergency Shuttle Station"
 	icon_state = "shuttle2"
-	base_turf = /turf/simulated/floor/asteroid
+	base_turf = /turf/space
 	station_area = 1
 
 /area/shuttle/escape/centcom
@@ -129,7 +129,7 @@ area/space/atmosalert()
 
 /area/shuttle/escape_pod1/station
 	icon_state = "shuttle2"
-	base_turf = /turf/simulated/floor/asteroid
+	base_turf = /turf/space
 	station_area = 1
 
 /area/shuttle/escape_pod1/centcom
@@ -147,7 +147,7 @@ area/space/atmosalert()
 
 /area/shuttle/escape_pod2/station
 	icon_state = "shuttle2"
-	base_turf = /turf/simulated/floor/asteroid
+	base_turf = /turf/space
 	station_area = 1
 
 /area/shuttle/escape_pod2/centcom
@@ -165,7 +165,7 @@ area/space/atmosalert()
 
 /area/shuttle/escape_pod3/station
 	icon_state = "shuttle2"
-	base_turf = /turf/simulated/floor/asteroid
+	base_turf = /turf/space
 	station_area = 1
 
 /area/shuttle/escape_pod3/centcom
@@ -183,7 +183,7 @@ area/space/atmosalert()
 
 /area/shuttle/escape_pod5/station
 	icon_state = "shuttle2"
-	base_turf = /turf/simulated/floor/asteroid
+	base_turf = /turf/space
 	station_area = 1
 
 /area/shuttle/escape_pod5/centcom
@@ -218,7 +218,7 @@ area/space/atmosalert()
 /area/shuttle/transport1/station
 	icon_state = "shuttle"
 	name = "\improper Transport Shuttle"
-	base_turf = /turf/simulated/floor/asteroid
+	base_turf = /turf/space
 	station_area = 1
 
 /area/shuttle/specops/centcom
@@ -230,7 +230,7 @@ area/space/atmosalert()
 
 /area/shuttle/specops/station
 	icon_state = "shuttlered2"
-	base_turf = /turf/simulated/floor/asteroid
+	base_turf = /turf/space
 	station_area = 1
 
 /area/shuttle/syndicate_elite
@@ -243,7 +243,7 @@ area/space/atmosalert()
 
 /area/shuttle/syndicate_elite/station
 	icon_state = "shuttlered2"
-	base_turf = /turf/simulated/floor/asteroid
+	base_turf = /turf/space
 	station_area = 1
 
 /area/shuttle/administration
@@ -258,7 +258,7 @@ area/space/atmosalert()
 /area/shuttle/administration/station
 	name = "\improper Administration Shuttle"
 	icon_state = "shuttlered2"
-	base_turf = /turf/simulated/floor/asteroid
+	base_turf = /turf/space
 	station_area = 1
 
 /area/shuttle/research
@@ -442,7 +442,7 @@ area/space/atmosalert()
 	name = "\improper Surface of the Station"
 	icon_state = "southwest"
 	station_area = 1
-	base_turf = /turf/simulated/floor/asteroid
+	base_turf = /turf/space
 
 /area/syndicate_station/above
 	name = "\improper Above the Station"
@@ -458,13 +458,13 @@ area/space/atmosalert()
 	name = "\improper Caverns"
 	icon_state = "southeast"
 	station_area = 1
-	base_turf = /turf/simulated/floor/asteroid
+	base_turf = /turf/space
 
 /area/syndicate_station/arrivals_dock
 	name = "\improper Docked with Station"
 	icon_state = "shuttle"
 	station_area = 1
-	base_turf = /turf/simulated/floor/asteroid
+	base_turf = /turf/space
 
 /area/syndicate_station/transit
 	name = "\improper Hyperspace"
@@ -501,7 +501,7 @@ area/space/atmosalert()
 	name = "\improper Surface of the Station"
 	icon_state = "southwest"
 	station_area = 1
-	base_turf = /turf/simulated/floor/asteroid
+	base_turf = /turf/space
 
 /area/skipjack_station/above
 	name = "\improper Above the Station"
@@ -517,7 +517,7 @@ area/space/atmosalert()
 	name = "\improper Caverns"
 	icon_state = "southeast"
 	station_area = 1
-	base_turf = /turf/simulated/floor/asteroid
+	base_turf = /turf/space
 
 //For Exodus
 /area/syndicate_station/southwest
@@ -551,7 +551,7 @@ area/space/atmosalert()
 /area/syndicate_station/mining
 	name = "northeast of the mining station"
 	icon_state = "north"
-	base_turf = /turf/simulated/floor/asteroid
+	base_turf = /turf/space
 
 /area/syndicate_station/arrivals_dock
 	name = "docked with station"
@@ -591,7 +591,7 @@ area/space/atmosalert()
 /area/skipjack_station/mining
 	name = "south of mining station"
 	icon_state = "north"
-	base_turf = /turf/simulated/floor/asteroid
+	base_turf = /turf/space
 
 ////////////////////
 //SPACE STATION 13//
