@@ -155,6 +155,7 @@
 
 	H.flavor_texts = R.flavor.Copy()
 	attempting = 0
+	H.megavend = 1
 	return 1
 
 /obj/machinery/clonepod/proc/GetCloneReadiness() // Returns a number between 0 and 100
