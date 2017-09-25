@@ -7,7 +7,7 @@
 	density = 1
 	anchored = 1
 	var/obj/machinery/mineral/stacking_machine/machine = null
-	//var/machinedir = NORTHEAST
+	var/machinedir = NORTHEAST
 	use_power = 1
 	idle_power_usage = 15
 	active_power_usage = 50
