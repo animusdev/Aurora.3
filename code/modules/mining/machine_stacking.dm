@@ -7,7 +7,7 @@
 	density = 1
 	anchored = 1
 	var/obj/machinery/mineral/stacking_machine/machine = null
-	var/machinedir = NORTHEAST
+	//var/machinedir = NORTHEAST
 	use_power = 1
 	idle_power_usage = 15
 	active_power_usage = 50
@@ -15,7 +15,7 @@
 /obj/machinery/mineral/stacking_unit_console/Initialize()
 	. = ..()
 	for (var/dir in cardinal)
-		src.machine = locate(/obj/machinery/mineral/stacking_machine, get_step(src, machinedir))
+		src.machine = locate(/obj/machinery/mineral/stacking_machine, get_step(src, dir))
 		if(src.machine) break
 	if (machine)
 		machine.console = src
