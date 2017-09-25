@@ -18,7 +18,9 @@
 
 /obj/machinery/mineral/processing_unit_console/Initialize()
 	. = ..()
-	src.machine = locate(/obj/machinery/mineral/processing_unit, get_step(src, machinedir))
+	for (var/dir in cardinal)
+		src.machine = locate(/obj/machinery/mineral/input, get_step(src, dir))
+		if(src.machine) break
 	if (machine)
 		machine.console = src
 	else
