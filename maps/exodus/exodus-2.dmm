@@ -724,7 +724,7 @@
 "anV" = (/obj/structure/table/steel_reinforced,/obj/item/weapon/paper_bin,/turf/simulated/floor/tiled/dark,/area/security/brig)
 "anW" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/effect/floor_decal/corner/blue{icon_state = "corner_white"; dir = 9},/turf/simulated/floor/tiled,/area/security/brig)
 "anX" = (/obj/machinery/alarm{pixel_y = 25},/turf/simulated/floor/tiled,/area/security/brig)
-"anY" = (/obj/machinery/light{dir = 1; pixel_y = 32},/obj/machinery/computer/sentencing{pixel_y = 28},/turf/simulated/floor/tiled,/area/security/brig)
+"anY" = (/obj/machinery/light{dir = 1; pixel_y = 0},/obj/machinery/computer/sentencing{pixel_y = 28},/turf/simulated/floor/tiled,/area/security/brig)
 "anZ" = (/obj/machinery/computer/secure_data,/turf/simulated/floor/tiled,/area/security/brig)
 "aoa" = (/obj/structure/table/standard{name = "plastic table frame"},/obj/item/device/taperecorder{pixel_x = -4; pixel_y = 2},/obj/item/weapon/paper/sentencing,/turf/simulated/floor/tiled,/area/security/brig)
 "aob" = (/obj/structure/table/standard{name = "plastic table frame"},/obj/item/weapon/paper_bin,/obj/item/weapon/pen,/turf/simulated/floor/tiled,/area/security/brig)
