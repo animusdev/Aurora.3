@@ -463,3 +463,6 @@
 
 /obj/effect/floor_decal/sign/c2
 	icon_state = "white_c2"
+
+/obj/effect/floor_decal/solarpanel
+	icon_state = "solarpanel"
