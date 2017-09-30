@@ -845,3 +845,14 @@
 		/obj/item/weapon/material/sword/dao,
 		/obj/item/weapon/material/sword/gladius
 	)
+
+/obj/random/musical_device
+	name = "random musical device"
+	desc = "This is a random stuff that plays music"
+	icon = 'icons/obj/musician.dmi'
+	icon_state = "minimoog"
+	spawnlist = list(
+		/obj/structure/device/piano,
+		/obj/structure/synthesized_instrument/synthesizer,
+		/obj/machinery/media/jukebox,
+	)
