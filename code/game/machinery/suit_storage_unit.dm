@@ -34,6 +34,16 @@
 	HELMET_TYPE = /obj/item/clothing/head/helmet/space
 	MASK_TYPE = /obj/item/clothing/mask/breath
 
+/obj/machinery/suit_storage_unit/engineering
+	SUIT_TYPE = /obj/item/clothing/suit/space/void/engineering
+	HELMET_TYPE = /obj/item/clothing/head/helmet/space/void/engineering
+	MASK_TYPE = /obj/item/clothing/mask/breath
+
+/obj/machinery/suit_storage_unit/atmos
+	SUIT_TYPE = /obj/item/clothing/suit/space/void/atmos
+	HELMET_TYPE = /obj/item/clothing/head/helmet/space/void/atmos
+	MASK_TYPE = /obj/item/clothing/mask/breath
+
 
 /obj/machinery/suit_storage_unit/Initialize()
 	. = ..()
