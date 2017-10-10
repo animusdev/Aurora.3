@@ -142,7 +142,6 @@
 		new /obj/item/weapon/melee/telebaton(src)
 		new /obj/item/clothing/head/beret/sec/hos(src)
 		new /obj/item/clothing/accessory/badge/hos(src)
-		new /obj/item/ammo_magazine/tranq(src)
 		new /obj/item/device/holowarrant(src)
 
 /obj/structure/closet/secure_closet/hos2
