@@ -421,7 +421,7 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 
 	C.status_flags |= FAKEDEATH		//play dead
 	C.update_canmove()
-	C.remove_changeling_powers()
+	C.verbs -= /mob/proc/changeling_fakedeath
 
 	C.emote("gasp")
 	C.tod = worldtime2text()
@@ -453,6 +453,7 @@ var/global/list/possible_changeling_IDs = list("Alpha","Beta","Gamma","Delta","E
 	// sending display messages
 	C << "<span class='notice'>We have regenerated.</span>"
 	C.verbs -= /mob/proc/changeling_revive
+	C.verbs += /mob/proc/changeling_fakedeath
 
 
 //Boosts the range of your next sting attack by 1
