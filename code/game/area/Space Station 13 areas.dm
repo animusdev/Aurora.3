@@ -1233,6 +1233,10 @@ area/space/atmosalert()
 	name = "\improper Engineering Storage"
 	icon_state = "engineering_storage"
 
+/area/engineering/emergency_storage
+	name = "\improper Engineering Emergency Storage"
+	icon_state = "engineering_storage"
+
 /area/engineering/break_room
 	name = "\improper Engineering Break Room"
 	icon_state = "engineering_break"
