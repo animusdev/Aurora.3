@@ -1,5 +1,5 @@
 var/global/datum/repository/crew/crew_repository = new()
-var/list/map_levels = list(3,4,6)
+var/list/map_levels = list(1,2,3,4,5,6)
 
 /datum/repository/crew
 	var/list/cache_data
@@ -24,7 +24,7 @@ var/list/map_levels = list(3,4,6)
 	var/tracked = scan()
 	for(var/obj/item/clothing/under/C in tracked)
 		var/turf/pos = get_turf(C)
-		if((C) && (C.has_sensor) && (pos) && (pos.z == z_level) && (C.sensor_mode != SUIT_SENSOR_OFF))
+		if(C.has_sensor && pos && pos.z == z_level && C.sensor_mode != SUIT_SENSOR_OFF)
 			if(istype(C.loc, /mob/living/carbon/human))
 				var/mob/living/carbon/human/H = C.loc
 				if(H.w_uniform != C)
