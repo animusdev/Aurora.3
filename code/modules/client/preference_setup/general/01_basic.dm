@@ -75,13 +75,6 @@
 		var/DBQuery/query = dbcon.NewQuery("SELECT DATEDIFF(NOW(), created_at) AS DiffDate FROM erro_characters WHERE id = :id:")
 		query.Execute(list("id" = text2num(pref.current_character)))
 
-		if (query.NextRow())
-			if (text2num(query.item[1]) > 5)
-				pref.can_edit_name = 0
-		else
-			error("SQL CHARACTER LOAD: Logic error, general/basic/load_special() didn't return any rows when it should have.")
-			log_debug("SQL CHARACTER LOAD: Logic error, general/basic/load_special() didn't return any rows when it should have. Character ID: [pref.current_character].")
-
 /datum/category_item/player_setup_item/general/basic/sanitize_character()
 	if(!pref.species || !(pref.species in playable_species))
 		pref.species = "Human"
@@ -126,14 +119,6 @@
 				user << "<span class='warning'>Invalid name. Your name should be at least 2 and at most [MAX_NAME_LEN] characters long. It may only contain the characters A-Z, a-z, -, ' and .</span>"
 				return TOPIC_NOACTION
 
-	else if(href_list["namehelp"])
-		alert(user, "Due to game mechanics, you are no longer able to edit the name for this character. The grace period offered is 5 days since the character's initial save.\n\nIf you have a need to change the character's name, or further questions regarding this policy, please contact an administrator.")
-		return TOPIC_NOACTION
-
-	else if(href_list["random_name"])
-		if (!pref.can_edit_name)
-			alert(user, "You can no longer edit the name of your character.\n\nIf there is a legitimate need, please contact an administrator regarding the matter.")
-			return TOPIC_NOACTION
 
 		pref.real_name = random_name(pref.gender, pref.species)
 		return TOPIC_REFRESH
