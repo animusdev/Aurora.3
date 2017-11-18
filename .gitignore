@@ -16,5 +16,5 @@ __pycache__/
 *$py.class
 /.atom-build.json
 .vscode/
-maps/tmp.dmm
+maps/*/backup
 maps/exodus/tmp.dmm
