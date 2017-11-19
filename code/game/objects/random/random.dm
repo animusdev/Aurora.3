@@ -851,8 +851,8 @@
 	desc = "This is a random stuff that plays music"
 	icon = 'icons/obj/musician.dmi'
 	icon_state = "minimoog"
-	spawnlist = list(
-		/obj/structure/device/piano,
-		/obj/structure/synthesized_instrument/synthesizer,
-		/obj/machinery/media/jukebox,
+	problist = list(
+		/obj/structure/device/piano = 5,
+		/obj/structure/synthesized_instrument/synthesizer = 1,
+		/obj/machinery/media/jukebox = 5
 	)

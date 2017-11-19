@@ -19,7 +19,7 @@
 	var/movetotarget = 1
 
 /obj/effect/accelerated_particle/weak
-	movement_range = 8
+	movement_range = 10
 	energy = 5
 
 /obj/effect/accelerated_particle/strong
